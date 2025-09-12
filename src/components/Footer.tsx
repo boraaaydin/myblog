@@ -1,4 +1,5 @@
 import { TAGS } from '@/lib/tags';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -35,9 +36,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
-                <a href="/contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                <Link href="/contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">
                   İletişim
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
