@@ -81,8 +81,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </time>
             <span>•</span>
             <span>{post.readingTime} dakika okuma</span>
-            <span>•</span>
-            <span>Yazar: {post.author}</span>
           </div>
         </header>
         
