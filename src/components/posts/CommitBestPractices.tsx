@@ -21,7 +21,7 @@ export default function CommitBestPractices() {
           <li>Temiz bir commit durumu ile bir sonraki geliştirmene başla</li>
         </ul>
         <p>
-          Bu yaklaşımın birçok avantajı var. Öncelikle her adımda neyi değiştirdiğini net olarak biliyorsun. Bir hata olduğunda hangi commit'te başladığını kolayca bulabiliyorsun. Ayrıca kod inceleme süreçleri de çok daha kolay oluyor.
+          Bu yaklaşımın birçok avantajı var. Öncelikle her adımda neyi değiştirdiğini net olarak biliyorsun. Bir hata olduğunda hangi commit&apos;te başladığını kolayca bulabiliyorsun. Ayrıca kod inceleme süreçleri de çok daha kolay oluyor.
         </p>
       </section>
 
@@ -29,10 +29,10 @@ export default function CommitBestPractices() {
         <h2>Commit Öncesi Kontrol Listesi</h2>
         <p>Commit yapmadan önce şu adımları takip etmek çok faydalı:</p>
         <ol>
-          <li><strong>Git status'a bak</strong> - Hangi dosyalarda değişiklik yaptığını gör</li>
-          <li><strong>Diff'leri incele</strong> - Her değişikliği gözden geçir</li>
+          <li><strong>Git status&apos;a bak</strong> - Hangi dosyalarda değişiklik yaptığını gör</li>
+          <li><strong>Diff&apos;leri incele</strong> - Her değişikliği gözden geçir</li>
           <li><strong>Gereksiz kod temizliği yap</strong> - Geliştirme sırasında eklediğin test kodları, debug satırları var mı kontrol et</li>
-          <li><strong>Amacından sapmadığından emin ol</strong> - O commit'te sadece planladığın değişiklikler olmalı</li>
+          <li><strong>Amacından sapmadığından emin ol</strong> - O commit&apos;te sadece planladığın değişiklikler olmalı</li>
         </ol>
       </section>
 
@@ -50,7 +50,7 @@ export default function CommitBestPractices() {
           </code>
         </pre>
         <p>
-          Şeklinde bir yorum ekle ve mevcut commit'ini temizle. Sonra ayrı bir görev olarak o sorunu ele al. Bu sayede her commit'in tek bir amacı olur ve kod geçmişin çok daha okunabilir hale gelir.
+          Şeklinde bir yorum ekle ve mevcut commit&apos;ini temizle. Sonra ayrı bir görev olarak o sorunu ele al. Bu sayede her commit&apos;in tek bir amacı olur ve kod geçmişin çok daha okunabilir hale gelir.
         </p>
       </section>
 
@@ -59,7 +59,7 @@ export default function CommitBestPractices() {
         <p>Modern geliştirme sürecinde AI CLI araçlarını sıkça kullanıyoruz. Bu araçlarla çalışırken de benzer disiplinleri uygulayabiliriz:</p>
         <ul>
           <li>Her önemli geliştirme adımından sonra yeni bir AI conversation başlatmak, daha temiz ve odaklı sonuçlar verir</li>
-          <li>AI'ın önceki context'ten etkilenmesini önler ve daha stabil performans sağlar</li>
+          <li>AI&apos;ın önceki context&apos;ten etkilenmesini önler ve daha stabil performans sağlar</li>
           <li>Her yeni görev için fresh bir başlangıç yapmış olursun</li>
         </ul>
       </section>
