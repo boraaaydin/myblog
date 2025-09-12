@@ -95,5 +95,4 @@ The project is configured for GitHub Pages deployment:
 - Deploy script handles git operations automatically
 - Live site will be served in https://boraaydin.com/blog/
 - Local address will be http://localhost:3000/blog
-- BasePath configured as "blog"
 - Sitemap available at https://boraaydin.com/blog/sitemap.xml
