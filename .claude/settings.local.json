@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:boraaydin.com)",
+      "WebFetch(domain:boraaaydin.github.io)",
+      "Bash(tree:*)",
+      "Bash(npm run lint)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

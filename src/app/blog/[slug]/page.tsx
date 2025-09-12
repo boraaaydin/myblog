@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <nav className="mb-8">
           <Link 
-            href="/" 
+            href="/blog" 
             className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
           >
             ← Ana Sayfaya Dön
@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             
             <Link 
-              href="/" 
+              href="/blog" 
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
               Diğer Yazılar
