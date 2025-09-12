@@ -10,7 +10,7 @@ interface BlogCardProps {
 export default function BlogCard({ post }: BlogCardProps) {
   return (
     <article className="group cursor-pointer">
-      <Link href={`/blog/${post.slug}`}>
+      <Link href={`/${post.slug}`}>
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden">
           <div className="p-6">
             <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">

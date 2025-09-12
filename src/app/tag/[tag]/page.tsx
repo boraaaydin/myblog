@@ -26,10 +26,10 @@ export default function TagPage({ params }: TagPageProps) {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <Link 
-            href="/blog" 
+            href="/" 
             className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mb-6 transition-colors"
           >
-            ← Blog&apos;a Dön
+            ← Ana Sayfaya Dön
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
