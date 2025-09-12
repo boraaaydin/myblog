@@ -93,12 +93,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
           </div>
           
-          <div 
-            className="text-gray-800 dark:text-gray-200 leading-relaxed"
-            dangerouslySetInnerHTML={{ 
-              __html: post.content.replace(/\n/g, '<br/>') 
-            }}
-          />
+          <div className="text-gray-800 dark:text-gray-200 leading-relaxed">
+            <post.component />
+          </div>
         </div>
         
         <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
