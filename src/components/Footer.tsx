@@ -1,3 +1,5 @@
+import { TAGS } from '@/lib/tags';
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 mt-20">
@@ -14,29 +16,16 @@ export default function Footer() {
           
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-              Kategoriler
+              Etiketler
             </h4>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  React
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  Next.js
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  TypeScript
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  JavaScript
-                </a>
-              </li>
+              {Object.values(TAGS).map((tag) => (
+                <li key={tag}>
+                  <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                    {tag}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           
@@ -46,23 +35,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                  Email
+                <a href="/contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                  İletişim
                 </a>
               </li>
             </ul>
