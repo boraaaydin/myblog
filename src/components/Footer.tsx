@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-              Bora&apos;s Blog
+              Bora&apos;nın Yazılım Notları
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
               Yazılım geliştirme sürecinde karşılaştığım problemler, bulduğum çözümler ve öğrendiklerimi paylaştığım kişisel alan.
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
-          <p>&copy; 2025 Bora&apos;s Blog. Tüm hakları saklıdır.</p>
+          <p>&copy; 2025 Bora&apos;nın Yazılım Notları. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>
