@@ -8,7 +8,7 @@ export default function Footer() {
               Bora&apos;s Blog
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
-              Modern web teknolojileri, React, Next.js ve yazılım geliştirme deneyimlerimi paylaştığım kişisel blog.
+              Yazılım geliştirme sürecinde karşılaştığım problemler, bulduğum çözümler ve öğrendiklerimi paylaştığım kişisel alan.
             </p>
           </div>
           
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-500 dark:text-gray-400">
-          <p>&copy; 2024 Bora&apos;s Blog. Tüm hakları saklıdır.</p>
+          <p>&copy; 2025 Bora&apos;s Blog. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>
