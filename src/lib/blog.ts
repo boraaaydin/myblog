@@ -1,5 +1,6 @@
 import React from 'react';
 import CommitBestPractices from '../components/posts/CommitBestPractices';
+import { TAGS } from './tags';
 
 export interface BlogPost {
   id: string;
@@ -30,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Yazılım geliştirme sürecinde küçük commitler yapmanın önemi, commit öncesi kontrol listesi ve AI CLI araçları ile çalışırken dikkat edilmesi gerekenler.',
     component: CommitBestPractices,
     date: '2025-09-12',
-    tags: ['Git', 'İyi Pratikler', 'Geliştirme', 'Junior Geliştiriciler'],
+    tags: [TAGS.GIT, TAGS.BEST_PRACTICES, TAGS.DEVELOPMENT, TAGS.JUNIOR_DEVELOPERS],
     readingTime: 6
   }
 ];
