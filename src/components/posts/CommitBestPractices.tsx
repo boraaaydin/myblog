@@ -42,11 +42,11 @@ export default function CommitBestPractices() {
           Geliştirme yaparken çok sık başımıza gelir: bir şeyi düzeltirken başka bir sorun fark ederiz ve hemen onu da halletmek isteriz. Bu noktada kendimizi frenlememiz gerekiyor.
         </p>
         <p>
-          Eğer geliştirme yaparken başka bir sorun görürsen, hemen o anda düzeltmeye çalışma. Bunun yerine:
+          Bir geliştirme yaptınız, commit etmeye hazırlanıyorsunuz ama bir anda başka bir geliştirme daha yapmak istediğinize karar verdiniz. İşte tam bu noktada TODO yorumları devreye giriyor. Eğer geliştirme yaparken başka bir sorun görürsen, hemen o anda düzeltmeye çalışma. Bunun yerine:
         </p>
         <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
           <code className="text-sm">
-{`// TODO: Bu kısım optimize edilmeli - performans sorunu var`}
+            {`// TODO: Bu kısım optimize edilmeli - performans sorunu var`}
           </code>
         </pre>
         <p>
