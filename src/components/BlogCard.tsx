@@ -1,8 +1,10 @@
+'use client';
+
 import Link from 'next/link';
-import { BlogPost } from '@/lib/blog';
+import { BlogPostCard } from '@/lib/blog';
 
 interface BlogCardProps {
-  post: BlogPost;
+  post: BlogPostCard;
 }
 
 export default function BlogCard({ post }: BlogCardProps) {
@@ -33,19 +35,18 @@ export default function BlogCard({ post }: BlogCardProps) {
             
             <div className="flex flex-wrap gap-2 mb-4">
               {post.tags.map((tag) => (
-                <span
+                <Link
                   key={tag}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium"
+                  href={`/tag/${encodeURIComponent(tag)}`}
+                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
             
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {post.author}
-              </span>
               
               <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
                 Devamını Oku →
