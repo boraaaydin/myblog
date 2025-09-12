@@ -17,21 +17,6 @@ export default function Footer() {
           
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-              Etiketler
-            </h4>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-              {Object.values(TAGS).map((tag) => (
-                <li key={tag}>
-                  <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                    {tag}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
               Bağlantılar
             </h4>
             <ul className="space-y-2 text-gray-600 dark:text-gray-400">
@@ -40,6 +25,21 @@ export default function Footer() {
                   İletişim
                 </Link>
               </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
+              Etiketler
+            </h4>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+              {Object.values(TAGS).map((tag) => (
+                <li key={tag}>
+                  <Link href={`/blog/tag/${encodeURIComponent(tag)}`} className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                    {tag}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
