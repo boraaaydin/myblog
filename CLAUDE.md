@@ -71,6 +71,22 @@ src/
     └── tags.ts        # Tag constants
 ```
 
+## SEO & Site Features
+
+### Sitemap
+The blog includes automatic sitemap generation for SEO:
+- **Sitemap URL**: `/sitemap.xml` - automatically generates XML sitemap
+- **Robots.txt**: `/robots.txt` - includes sitemap reference for search engines
+- **Coverage**: Includes all blog posts, static pages, and tag pages
+- **Auto-updating**: Sitemap updates automatically when new posts are added
+
+### Sitemap Content
+The sitemap includes:
+- Home page (`/blog`)
+- Contact page (`/blog/contact`)
+- All blog posts (`/blog/[slug]`)
+- All tag pages (`/blog/tag/[tag]`)
+
 ## Deployment
 
 The project is configured for GitHub Pages deployment:
@@ -80,3 +96,4 @@ The project is configured for GitHub Pages deployment:
 - Live site will be served in https://boraaydin.com/blog/
 - Local address will be http://localhost:3000/blog
 - BasePath configured as "blog"
+- Sitemap available at https://boraaydin.com/blog/sitemap.xml
