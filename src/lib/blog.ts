@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Küçük Commitlerle Büyük Kazanımlar: Geliştirme Sürecinde İyi Alışkanlıklar',
     excerpt: 'Yazılım geliştirme sürecinde küçük commitler yapmanın önemi, commit öncesi kontrol listesi ve AI CLI araçları ile çalışırken dikkat edilmesi gerekenler.',
     component: CommitBestPractices,
-    date: '12.09.2025',
+    date: '2025-09-12',
     tags: ['Git', 'İyi Pratikler', 'Geliştirme'],
     readingTime: 6
   }
