@@ -1,4 +1,5 @@
 import ToolTip from "@/components/ToolTip";
+import Terminal, { TerminalClaude, TerminalCommand, TerminalInfo, TerminalResult } from "../Terminal";
 
 export default function MCPServersGuide() {
   return (
@@ -10,7 +11,10 @@ export default function MCPServersGuide() {
       <p>
         We can add additional features to AI with <ToolTip keyName="mcp-server">MCP servers</ToolTip>. However, as the MCP servers we use increase, the <ToolTip keyName="context-window">context window</ToolTip> starts to decrease. <ToolTip keyName="claude-code">Claude Code</ToolTip> allows us to parametrically select the MCP servers we will use in each session.
       </p>
-
+      <Terminal title="Claude Code with MCP Server">
+          <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
+          <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
+        </Terminal>
       <section>
         <h2>Context Window Problem</h2>
         <p>
@@ -28,21 +32,35 @@ export default function MCPServersGuide() {
       </section>
 
       <section>
-        <h2>How to Use?</h2>
+      <h2>How is window context if don't use MCP servers?</h2>
+      <Terminal title="Claude Code with MCP Server">
+          <TerminalCommand>claude</TerminalCommand>
+          <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
+          <TerminalClaude>/context</TerminalClaude>
+          <TerminalResult>Context Usage</TerminalResult>
+          <TerminalResult>claude-sonnet-4-20250514 • 17k/200k tokens (9%)</TerminalResult>
+          <TerminalResult>⛶ Free space: 185.4k (92.7%)</TerminalResult>
+        </Terminal>
 
-        <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
-          <code className="text-sm">
-            {`claude --mcp-config {servername}.json`}
-          </code>
-        </pre>
+        <h2>What if we want to use multiple MCP servers?</h2>
+
+        <Terminal title="Claude Code with MCP Server">
+          <TerminalCommand>claude --mcp-config server/context7.json --mcp-config server/playwright.json  --mcp-config server/sequential-thinking.json --mcp-config server/github.json --mcp-config server/supabase.json</TerminalCommand>
+          <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
+          <TerminalClaude>/context</TerminalClaude>
+          <TerminalResult>Context Usage</TerminalResult>
+          <TerminalResult>claude-sonnet-4-20250514 • 53k/200k tokens (26%)</TerminalResult>
+          <TerminalResult>⛁ MCP tools: 37.9k tokens (19.0%)</TerminalResult>
+          <TerminalResult>⛶ Free space: 147.0k (73.5%)</TerminalResult>
+        </Terminal>
 
         <p>
-          The biggest advantage: &quot;You can load a single MCP server before any session&quot; this way you use context efficiently.
+          The biggest advantage is if you don' t need any MCP server, you don' t need to load any. Use it if you need it. 
         </p>
 
       </section>
       <p>
-        You can check this GitHub repository to use the MCP you need in each session with Claude Code. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
+        You can check this GitHub repository to use the MCP' s easily. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
       </p>
       <section>
         <h2>Conclusion</h2>

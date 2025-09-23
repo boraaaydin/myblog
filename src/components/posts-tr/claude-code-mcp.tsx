@@ -1,4 +1,5 @@
 import ToolTip from "@/components/ToolTip";
+import Terminal, { TerminalClaude, TerminalCommand, TerminalInfo, TerminalResult } from "../Terminal";
 
 export default function MCPServersGuide() {
   return (
@@ -10,9 +11,10 @@ export default function MCPServersGuide() {
       <p>
         <ToolTip keyName="mcp-server">MCP sunucuları</ToolTip> ile yapay zekaya ilave özellikler ekleyebiliyoruz. Ancak kullandığımız MCP sunucuları arttıkça <ToolTip keyName="context-window">context window</ToolTip> azalmaya başlıyor. <ToolTip keyName="claude-code">Claude Code</ToolTip> bize her oturumda kullanacağımız MCP serverları parametrik olarak seçebilmemize imkan sağlıyor.
       </p>
-
-
-
+      <Terminal title="Claude Code ile MCP Server">
+          <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
+          <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+        </Terminal>
       <section>
         <h2>Context Window Sorunu</h2>
         <p>
@@ -30,16 +32,30 @@ export default function MCPServersGuide() {
       </section>
 
       <section>
-        <h2>Nasıl Kullanılır?</h2>
+      <h2>MCP server kullanmazsak context window nasıl?</h2>
+      <Terminal title="Claude Code ile MCP Server">
+          <TerminalCommand>claude</TerminalCommand>
+          <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+          <TerminalClaude>/context</TerminalClaude>
+          <TerminalResult>Context Kullanımı</TerminalResult>
+          <TerminalResult>claude-sonnet-4-20250514 • 17k/200k tokens (%9)</TerminalResult>
+          <TerminalResult>⛶ Boş alan: 185.4k (%92.7)</TerminalResult>
+        </Terminal>
 
-        <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
-          <code className="text-sm">
-            {`claude --mcp-config {servername}.json`}
-          </code>
-        </pre>
+        <h2>Peki birden fazla MCP server kullanmak istersek?</h2>
+
+        <Terminal title="Claude Code ile MCP Server">
+          <TerminalCommand>claude --mcp-config server/context7.json --mcp-config server/playwright.json  --mcp-config server/sequential-thinking.json --mcp-config server/github.json --mcp-config server/supabase.json</TerminalCommand>
+          <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+          <TerminalClaude>/context</TerminalClaude>
+          <TerminalResult>Context Kullanımı</TerminalResult>
+          <TerminalResult>claude-sonnet-4-20250514 • 53k/200k tokens (%26)</TerminalResult>
+          <TerminalResult>⛁ MCP araçları: 37.9k tokens (%19.0)</TerminalResult>
+          <TerminalResult>⛶ Boş alan: 147.0k (%73.5)</TerminalResult>
+        </Terminal>
 
         <p>
-          En büyük avantaj: &quot;Herhangi bir session öncesinde tek bir MCP sunucusu yükleyebilirsiniz&quot; bu sayede context&apos;i verimli kullanırsınız.
+          En büyük avantaj: Herhangi bir MCP server'a ihtiyacınız yoksa hiçbirini yüklemenize gerek yok. İhtiyacınız varsa kullanın.
         </p>
 
       </section>
