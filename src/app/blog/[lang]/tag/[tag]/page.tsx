@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getPostsByTag } from '@/lib/blog';
-import { TagKey, isValidTag } from '@/lib/tags';
+import { getTagKeyBySlug } from '@/lib/tags';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -42,13 +42,13 @@ export default function TagPage({ params }: TagPageProps) {
     notFound();
   }
 
-  const upperTag = tag.toUpperCase() as TagKey;
+  const tagKey = getTagKeyBySlug(tag);
 
-  if (!isValidTag(upperTag)) {
+  if (!tagKey) {
     notFound();
   }
 
-  const posts = getPostsByTag(upperTag, lang as 'tr' | 'en');
+  const posts = getPostsByTag(tagKey, lang as 'tr' | 'en');
   const isTurkish = lang === 'tr';
 
   if (posts.length === 0) {
@@ -71,7 +71,7 @@ export default function TagPage({ params }: TagPageProps) {
 
         <header className="mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {isTurkish ? `"${upperTag}" Etiketi` : `Tag: "${upperTag}"`}
+            {isTurkish ? `"${tagKey}" Etiketi` : `Tag: "${tagKey}"`}
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
             {isTurkish

@@ -47,3 +47,12 @@ export function getTagBySlug(slug: string): TagInfo | undefined {
 export function getTagDisplayName(tagKey: TagKey, locale: 'tr' | 'en' = 'tr'): string {
   return TAGS[tagKey][locale];
 }
+
+export function isValidTag(tag: string): tag is TagKey {
+  return tag in TAGS;
+}
+
+export function getTagKeyBySlug(slug: string): TagKey | undefined {
+  const tagEntry = Object.entries(TAGS).find(([_, tagInfo]) => tagInfo.slug === slug);
+  return tagEntry ? tagEntry[0] as TagKey : undefined;
+}

@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="flex flex-wrap gap-1 text-gray-600 dark:text-gray-400">
                 {Object.entries(TAGS).map(([key, tag], index) => (
                   <span key={key}>
-                    <Link href={`/blog/tag/${tag.slug}`} className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                    <Link href={`/blog/${language}/tag/${tag.slug}`} className="hover:text-gray-900 dark:hover:text-white transition-colors">
                       {getTagDisplayName(key as keyof typeof TAGS, language)}
                     </Link>
                     {index < Object.entries(TAGS).length - 1 && <span>, </span>}
