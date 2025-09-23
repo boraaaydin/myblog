@@ -53,8 +53,14 @@ Blog posts are managed through a component-based system:
 ### Adding New Blog Posts
 
 1. Create a new React component in `src/components/posts/`
-2. Add the post entry to the `blogPosts` array in `src/lib/blog.ts`
+2. Add the post entry to the `blogPosts` array in `src/lib/posts.ts`
 3. Use existing tags from `src/lib/tags.ts` or add new ones
+
+### Naming Conventions
+
+- **Slugs**: Use lowercase letters with hyphens between words (e.g., `claude-code-mcp`, `git-best-practices`)
+- **Component names**: Use lowercase letters with hyphens between words (e.g., `claude-code-mcp`, `commit-best-practices`)
+- **File names**: Use lowercase letters with hyphens between words (e.g., `claude-code-mcp.tsx`, `commit-best-practices.tsx`)
 
 ## File Structure
 
@@ -67,7 +73,8 @@ src/
 ├── components/         # Reusable components
 │   └── posts/         # Blog post components
 └── lib/               # Utilities and data
-    ├── blog.ts        # Blog post definitions
+    ├── blog.ts        # Blog utility functions
+    ├── posts.ts       # Blog post definitions
     └── tags.ts        # Tag constants
 ```
 

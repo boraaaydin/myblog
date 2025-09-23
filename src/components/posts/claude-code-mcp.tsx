@@ -9,9 +9,7 @@ export default function MCPServersGuide() {
         MCP sunucuları ile yapay zekaya ilave özellikler ekleyebiliyoruz. Ancak kullandığımız MCP sunucuları arttıkça context window azalmaya başlıyor. Claude Code bize her oturumda kullanacağımız MCP serverları parametrik olarak seçebilmemize imkan sağlıyor.
       </p>
 
-      <p>
-        Bu yazıda bahsedilen tüm MCP sunucuları <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">GitHub repository</a>'de açık kaynak olarak mevcut ve kolayca kullanılabilir.
-      </p>
+
 
       <section>
         <h2>Context Window Sorunu</h2>
@@ -38,25 +36,21 @@ export default function MCPServersGuide() {
 
       <section>
         <h2>Nasıl Kullanılır?</h2>
-        <p>MCP sunucularını kullanmak oldukça basit:</p>
 
-        <h3>1. Temel Kurulum</h3>
         <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
           <code className="text-sm">
-            {`claude --mcp-config server{name}.json`}
+            {`claude --mcp-config {servername}.json`}
           </code>
         </pre>
 
-        <h3>2. Oturum Öncesi Yükleme</h3>
         <p>
           En büyük avantaj: "Herhangi bir session öncesinde tek bir MCP sunucusu yükleyebilirsiniz" bu sayede context'i verimli kullanırsınız.
         </p>
 
-        <h3>3. Cross-Platform Destek</h3>
-        <p>
-          Mac, Linux ve Windows sistemlerde çalışır. API key kurulumu farklı ortamlar için optimize edilmiş.
-        </p>
       </section>
+      <p>
+        Her oturumda ihtiyacınız olan mcp' yi claude code ile kullanmak için bu github reposunu inceleyebilirsiniz. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
+      </p>
       <section>
         <h2>Sonuç</h2>
         <p>

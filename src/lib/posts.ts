@@ -1,5 +1,5 @@
 import CommitBestPractices from '../components/posts/CommitBestPractices';
-import MCPServersGuide from '../components/posts/MCPServersGuide';
+import MCPServersGuide from '../components/posts/claude-code-mcp';
 import { TAGS } from './tags';
 import { BlogPost } from './blog';
 
