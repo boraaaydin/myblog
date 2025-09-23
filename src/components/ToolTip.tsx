@@ -17,13 +17,14 @@ export default function ToolTip({ keyName, children }: ToolTipProps) {
   }
 
   return (
-    <span className="relative inline-block">
-      <button
+    <>
+      <span
+        className="relative inline-block underline decoration-dotted hover:decoration-solid cursor-pointer"
+        onMouseEnter={() => setIsOpen(true)}
         onClick={() => setIsOpen(!isOpen)}
-        className="underline decoration-dotted hover:decoration-solid cursor-pointer"
       >
         {children}
-      </button>
+      </span>
 
       {isOpen && (
         <>
@@ -31,7 +32,14 @@ export default function ToolTip({ keyName, children }: ToolTipProps) {
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute z-50 mt-2 p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg max-w-md w-max">
+          <div
+            className="fixed z-50 p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg max-w-md"
+            style={{
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
             <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
               {content}
             </div>
@@ -44,6 +52,6 @@ export default function ToolTip({ keyName, children }: ToolTipProps) {
           </div>
         </>
       )}
-    </span>
+    </>
   );
 }
