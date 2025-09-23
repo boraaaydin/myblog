@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import BlogCard from '@/components/BlogCard';
 import Footer from '@/components/Footer';
-import { getPostsByTag, getAllPosts } from '@/lib/blog';
+import { getPostsByTag } from '@/lib/blog';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -13,6 +13,7 @@ interface TagPageProps {
 
 export default function TagPage({ params }: TagPageProps) {
   const decodedTag = decodeURIComponent(params.tag);
+  // Şimdilik tüm postları göster, dil seçimi ana sayfada yapılıyor
   const posts = getPostsByTag(decodedTag);
   
   if (posts.length === 0) {
@@ -58,12 +59,11 @@ export default function TagPage({ params }: TagPageProps) {
   );
 }
 
-// Generate static params for all tags
 export async function generateStaticParams() {
-  const posts = getAllPosts();
-  const allTags = posts.flatMap(post => post.tags);
+  const { blogPostsWithComponents } = await import('@/lib/posts');
+  const allTags = blogPostsWithComponents.flatMap(post => post.tags);
   const uniqueTags = [...new Set(allTags)];
-  
+
   return uniqueTags.map((tag) => ({
     tag: encodeURIComponent(tag),
   }));

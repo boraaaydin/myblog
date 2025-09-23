@@ -1,40 +1,37 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getPostBySlug, getAllPosts } from '@/lib/blog';
+import { getPostBySlug } from '@/lib/blog';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 interface BlogPostPageProps {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
-}
-
-export async function generateStaticParams() {
-  const posts = getAllPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-export async function generateMetadata({ params }: BlogPostPageProps) {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
-  
-  if (!post) {
-    return {
-      title: 'Yazı Bulunamadı',
-    };
-  }
-
-  return {
-    title: `${post.title} | Bora's Blog`,
-    description: post.excerpt,
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params;
+export async function generateStaticParams() {
+  const { blogPostsWithComponents } = await import('@/lib/posts');
+  const slugs: string[] = [];
+
+  blogPostsWithComponents.forEach(post => {
+    if (post['slug-tr'] && post['slug-tr'].trim() !== '') {
+      slugs.push(post['slug-tr']);
+    }
+    if (post['slug-en'] && post['slug-en'].trim() !== '') {
+      slugs.push(post['slug-en']);
+    }
+  });
+
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export default function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = params;
+
+  // Slug'dan dili algıla ve doğru post'u getir
   const post = getPostBySlug(slug);
 
   if (!post) {

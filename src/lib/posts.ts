@@ -1,27 +1,53 @@
-import CommitBestPractices from '../components/posts/CommitBestPractices';
-import MCPServersGuide from '../components/posts/claude-code-mcp';
+import CommitBestPracticesTr from '../components/posts-tr/CommitBestPractices';
+import MCPServersGuideTr from '../components/posts-tr/claude-code-mcp';
+import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
+import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
 import { TAGS } from './tags';
-import { BlogPost } from './blog';
+import React from 'react';
 
-export const blogPosts: BlogPost[] = [
+export interface BlogPostWithComponents {
+  id: string;
+  'slug-tr': string;
+  'slug-en': string;
+  'title-tr': string;
+  'title-en': string;
+  'excerpt-tr': string;
+  'excerpt-en': string;
+  date: string;
+  tags: string[];
+  readingTime: number;
+  componentTr: React.ComponentType;
+  componentEn: React.ComponentType;
+}
+
+export const blogPostsWithComponents: BlogPostWithComponents[] = [
   {
     id: '2',
-    slug: 'mcp-sunuculari-claude-code-gizli-gucu',
-    title: 'Yapay Zekayı Verimli Kullanma: MCP Sunucuları',
-    excerpt: 'MCP sunucuları ile yapay zekaya ilave özellikler ekleyebiliyoruz. Claude Code\'un parametrik MCP seçimi ile context window\'u verimli kullanmayı öğrenin.',
-    component: MCPServersGuide,
+    'slug-tr': 'mcp-sunuculari-claude-code-gizli-gucu',
+    'slug-en': 'mcp-servers-claude-code-hidden-power',
+    'title-tr': 'Yapay Zekayı Verimli Kullanma: MCP Sunucuları',
+    'title-en': 'Using AI Efficiently: MCP Servers',
+    'excerpt-tr': 'MCP sunucuları ile yapay zekaya ilave özellikler ekleyebiliyoruz. Claude Code\'un parametrik MCP seçimi ile context window\'u verimli kullanmayı öğrenin.',
+    'excerpt-en': 'We can add additional features to AI with MCP servers. Learn how to use context window efficiently with Claude Code\'s parametric MCP selection.',
+    componentTr: MCPServersGuideTr,
+    componentEn: MCPServersGuideEn,
     date: '2025-09-23',
     tags: [TAGS.AI, TAGS.MCP, TAGS.CLAUDE_CODE, TAGS.DEVELOPMENT, TAGS.BEST_PRACTICES],
     readingTime: 7
   },
   {
     id: '1',
-    slug: 'kucuk-commitlerle-buyuk-kazanimlar',
-    title: 'Küçük Commitlerle Büyük Kazanımlar: Geliştirme Sürecinde İyi Alışkanlıklar',
-    excerpt: 'Yazılım geliştirme sürecinde küçük commitler yapmanın önemi, commit öncesi kontrol listesi ve AI CLI araçları ile çalışırken dikkat edilmesi gerekenler.',
-    component: CommitBestPractices,
+    'slug-tr': 'kucuk-commitlerle-buyuk-kazanimlar',
+    'slug-en': 'big-gains-with-small-commits',
+    'title-tr': 'Küçük Commitlerle Büyük Kazanımlar: Geliştirme Sürecinde İyi Alışkanlıklar',
+    'title-en': 'Big Gains with Small Commits: Good Habits in Development Process',
+    'excerpt-tr': 'Yazılım geliştirme sürecinde küçük commitler yapmanın önemi, commit öncesi kontrol listesi ve AI CLI araçları ile çalışırken dikkat edilmesi gerekenler.',
+    'excerpt-en': 'The importance of making small commits in software development process, pre-commit checklist and things to consider when working with AI CLI tools.',
+    componentTr: CommitBestPracticesTr,
+    componentEn: CommitBestPracticesEn,
     date: '2025-09-12',
     tags: [TAGS.GIT, TAGS.BEST_PRACTICES, TAGS.DEVELOPMENT, TAGS.JUNIOR_DEVELOPERS],
     readingTime: 6
   }
 ];
+

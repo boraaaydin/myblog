@@ -8,8 +8,8 @@ import { getAllPosts } from '@/lib/blog';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
-  const posts = getAllPosts();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const posts = getAllPosts(language);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">

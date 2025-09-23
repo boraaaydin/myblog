@@ -1,0 +1,78 @@
+export default function CommitBestPractices() {
+  return (
+    <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
+      <header>
+        <h1>Big Gains with Small Commits: Good Habits in Development Process</h1>
+      </header>
+
+      <p>
+        One of the most common mistakes we make in software development is writing code for days and then trying to make one big commit at once. But why is this so wrong and how can we do better?
+      </p>
+
+      <section>
+        <h2>Small Commits, Big Benefits</h2>
+        <p>
+          Instead of writing code for 5-6 days without making any commits, it makes much more sense to progress in small steps. Here's the ideal process:
+        </p>
+        <ul>
+          <li>Make a small development</li>
+          <li>Test it, make sure it works</li>
+          <li>Commit</li>
+          <li>Start your next development with a clean commit state</li>
+        </ul>
+        <p>
+          This approach has many advantages. First of all, you know exactly what you changed at each step. When there's an error, you can easily find which commit it started in. Code review processes also become much easier.
+        </p>
+      </section>
+
+      <section>
+        <h2>Pre-Commit Checklist</h2>
+        <p>Following these steps before committing is very beneficial:</p>
+        <ol>
+          <li><strong>Check git status</strong> - See which files you've changed</li>
+          <li><strong>Review diffs</strong> - Go through each change</li>
+          <li><strong>Clean up unnecessary code</strong> - Check if there are test codes, debug lines you added during development</li>
+          <li><strong>Make sure you haven't deviated from your purpose</strong> - Only the changes you planned should be in that commit</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>TODO Comments: The Secret to Staying Focused</h2>
+        <p>
+          It happens to us very often during development: while fixing one thing, we notice another problem and want to fix it immediately. At this point, we need to restrain ourselves.
+        </p>
+        <p>
+          You've made a development, you're getting ready to commit, but suddenly you decide you want to make another development. This is exactly where TODO comments come into play. If you see another problem while developing, don't try to fix it right away. Instead:
+        </p>
+        <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
+          <code className="text-sm">
+            {`// TODO: This part should be optimized - performance issue`}
+          </code>
+        </pre>
+        <p>
+          Add a comment like this and clean up your current commit. Then tackle that problem as a separate task. This way, each commit has a single purpose and your code history becomes much more readable.
+        </p>
+      </section>
+
+      <section>
+        <h2>Working with AI CLI Tools</h2>
+        <p>In modern development process, we frequently use AI CLI tools. We can apply similar disciplines when working with these tools:</p>
+        <ul>
+          <li>Starting a new AI conversation after each important development step gives cleaner and more focused results</li>
+          <li>Prevents AI from being affected by previous context and provides more stable performance</li>
+          <li>You get a fresh start for each new task</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          Making small commits is not just a technical habit, it actually changes your way of thinking. You develop the habit of breaking problems into small pieces, checking each step, and writing clean code.
+        </p>
+        <p>
+          Remember: every commit should tell a story. And the best stories are short, concise, and understandable.
+        </p>
+      </section>
+    </article>
+  );
+}
