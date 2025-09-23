@@ -2,7 +2,7 @@ import CommitBestPracticesTr from '../components/posts-tr/CommitBestPractices';
 import MCPServersGuideTr from '../components/posts-tr/claude-code-mcp';
 import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
 import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
-import { TAGS } from './tags';
+import { TagKey } from './tags';
 import React from 'react';
 
 export interface BlogPostWithComponents {
@@ -14,7 +14,7 @@ export interface BlogPostWithComponents {
   'excerpt-tr': string;
   'excerpt-en': string;
   date: string;
-  tags: string[];
+  tags: TagKey[];
   readingTime: number;
   componentTr: React.ComponentType;
   componentEn: React.ComponentType;
@@ -32,7 +32,7 @@ export const blogPostsWithComponents: BlogPostWithComponents[] = [
     componentTr: MCPServersGuideTr,
     componentEn: MCPServersGuideEn,
     date: '2025-09-23',
-    tags: [TAGS.AI, TAGS.MCP, TAGS.CLAUDE_CODE, TAGS.DEVELOPMENT, TAGS.BEST_PRACTICES],
+    tags: ['AI', 'MCP', 'CLAUDE_CODE', 'DEVELOPMENT', 'BEST_PRACTICES'],
     readingTime: 7
   },
   {
@@ -46,7 +46,7 @@ export const blogPostsWithComponents: BlogPostWithComponents[] = [
     componentTr: CommitBestPracticesTr,
     componentEn: CommitBestPracticesEn,
     date: '2025-09-12',
-    tags: [TAGS.GIT, TAGS.BEST_PRACTICES, TAGS.DEVELOPMENT, TAGS.JUNIOR_DEVELOPERS],
+    tags: ['GIT', 'BEST_PRACTICES', 'DEVELOPMENT', 'JUNIOR_DEVELOPERS'],
     readingTime: 6
   }
 ];

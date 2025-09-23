@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import BlogCard from '@/components/BlogCard';
 import Footer from '@/components/Footer';
 import { getPostsByTag } from '@/lib/blog';
+import { TAGS, getTagBySlug, getTagDisplayName, TagKey } from '@/lib/tags';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -12,10 +13,21 @@ interface TagPageProps {
 }
 
 export default function TagPage({ params }: TagPageProps) {
-  const decodedTag = decodeURIComponent(params.tag);
-  // Şimdilik tüm postları göster, dil seçimi ana sayfada yapılıyor
-  const posts = getPostsByTag(decodedTag);
-  
+  const tagSlug = decodeURIComponent(params.tag);
+  const tagInfo = getTagBySlug(tagSlug);
+
+  if (!tagInfo) {
+    notFound();
+  }
+
+  // Find the tag key from the tag info
+  const tagKey = Object.entries(TAGS).find(([, tag]) => tag.slug === tagSlug)?.[0] as TagKey;
+  if (!tagKey) {
+    notFound();
+  }
+
+  const posts = getPostsByTag(tagKey);
+
   if (posts.length === 0) {
     notFound();
   }
@@ -35,15 +47,15 @@ export default function TagPage({ params }: TagPageProps) {
           
           <div className="flex items-center gap-4 mb-6">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-              &ldquo;{decodedTag}&rdquo; Etiketi
+              &ldquo;{getTagDisplayName(tagKey, 'tr')}&rdquo; Etiketi
             </h1>
             <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium">
               {posts.length} yazı
             </span>
           </div>
-          
+
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            {decodedTag} etiketiyle işaretlenmiş tüm yazılar
+            {getTagDisplayName(tagKey, 'tr')} etiketiyle işaretlenmiş tüm yazılar
           </p>
         </div>
         
@@ -60,11 +72,9 @@ export default function TagPage({ params }: TagPageProps) {
 }
 
 export async function generateStaticParams() {
-  const { blogPostsWithComponents } = await import('@/lib/posts');
-  const allTags = blogPostsWithComponents.flatMap(post => post.tags);
-  const uniqueTags = [...new Set(allTags)];
+  const { TAGS } = await import('@/lib/tags');
 
-  return uniqueTags.map((tag) => ({
-    tag: encodeURIComponent(tag),
+  return Object.values(TAGS).map((tag) => ({
+    tag: tag.slug,
   }));
 }

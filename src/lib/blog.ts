@@ -1,5 +1,6 @@
 import React from 'react';
 import { blogPostsWithComponents } from './posts';
+import { TagKey } from './tags';
 
 export interface BlogPost {
   id: string;
@@ -7,7 +8,7 @@ export interface BlogPost {
   excerpt: string;
   component: React.ComponentType;
   date: string;
-  tags: string[];
+  tags: TagKey[];
   readingTime: number;
   'slug-tr': string;
   'slug-en': string;
@@ -18,14 +19,14 @@ export interface BlogPostCard {
   title: string;
   excerpt: string;
   date: string;
-  tags: string[];
+  tags: TagKey[];
   readingTime: number;
   slug: string;
   language: 'tr' | 'en';
 }
 
 function stripComponentFromPostWithComponents(post: typeof blogPostsWithComponents[0], language: 'tr' | 'en'): BlogPostCard {
-  const { 'title-tr': titleTr, 'title-en': titleEn, 'excerpt-tr': excerptTr, 'excerpt-en': excerptEn, 'slug-tr': slugTr, 'slug-en': slugEn, ...basePost } = post;
+  const { 'title-tr': titleTr, 'title-en': titleEn, 'excerpt-tr': excerptTr, 'excerpt-en': excerptEn, 'slug-tr': slugTr, 'slug-en': slugEn, componentTr, componentEn, ...basePost } = post;
   return {
     ...basePost,
     title: language === 'tr' ? titleTr : titleEn,
@@ -82,7 +83,7 @@ export function getPostBySlug(slug: string, language?: 'tr' | 'en'): BlogPost | 
   return undefined;
 }
 
-export function getPostsByTag(tag: string, language?: 'tr' | 'en'): BlogPostCard[] {
+export function getPostsByTag(tag: TagKey, language?: 'tr' | 'en'): BlogPostCard[] {
   let filteredPosts = blogPostsWithComponents.filter(post => post.tags.includes(tag));
 
   if (language) {

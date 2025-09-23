@@ -1,11 +1,11 @@
 'use client';
 
-import { TAGS } from '@/lib/tags';
+import { TAGS, getTagDisplayName } from '@/lib/tags';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -25,12 +25,12 @@ export default function Footer() {
                 {t.footer.tags}
               </h4>
               <div className="flex flex-wrap gap-1 text-gray-600 dark:text-gray-400">
-                {Object.values(TAGS).map((tag, index) => (
-                  <span key={tag}>
-                    <Link href={`/blog/tag/${encodeURIComponent(tag)}`} className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                      {tag}
+                {Object.entries(TAGS).map(([key, tag], index) => (
+                  <span key={key}>
+                    <Link href={`/blog/tag/${tag.slug}`} className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                      {getTagDisplayName(key as keyof typeof TAGS, language)}
                     </Link>
-                    {index < Object.values(TAGS).length - 1 && <span>, </span>}
+                    {index < Object.entries(TAGS).length - 1 && <span>, </span>}
                   </span>
                 ))}
               </div>
