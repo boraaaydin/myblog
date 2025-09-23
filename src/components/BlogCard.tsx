@@ -35,14 +35,16 @@ export default function BlogCard({ post }: BlogCardProps) {
             
             <div className="flex flex-wrap gap-2 mb-4">
               {post.tags.map((tag) => (
-                <Link
+                <span
                   key={tag}
-                  href={`/blog/tag/${encodeURIComponent(tag)}`}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors"
-                  onClick={(e) => e.stopPropagation()}
+                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.location.href = `/blog/tag/${encodeURIComponent(tag)}`;
+                  }}
                 >
                   {tag}
-                </Link>
+                </span>
               ))}
             </div>
             
