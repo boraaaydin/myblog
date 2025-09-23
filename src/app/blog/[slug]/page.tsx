@@ -11,15 +11,15 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const { blogPostsWithComponents } = await import('@/lib/posts');
+  const { blogPosts } = await import('@/lib/posts');
   const slugs: string[] = [];
 
-  blogPostsWithComponents.forEach(post => {
-    if (post['slug-tr'] && post['slug-tr'].trim() !== '') {
-      slugs.push(post['slug-tr']);
+  blogPosts.forEach(post => {
+    if (post.tr.slug && post.tr.slug.trim() !== '') {
+      slugs.push(post.tr.slug);
     }
-    if (post['slug-en'] && post['slug-en'].trim() !== '') {
-      slugs.push(post['slug-en']);
+    if (post.en.slug && post.en.slug.trim() !== '') {
+      slugs.push(post.en.slug);
     }
   });
 
