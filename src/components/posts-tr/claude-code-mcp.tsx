@@ -1,5 +1,5 @@
 import ToolTip from "@/components/ToolTip";
-import Terminal, { TerminalClaude, TerminalCommand, TerminalInfo, TerminalResult } from "../Terminal";
+import Terminal, { TerminalClaude, TerminalCommand, TerminalResult } from "../Terminal";
 
 export default function MCPServersGuide() {
   return (
@@ -13,7 +13,7 @@ export default function MCPServersGuide() {
       </p>
       <Terminal title="Claude Code ile MCP Server">
         <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
-        <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+        <TerminalResult>✻ Claude Code&apos;a Hoş Geldiniz! </TerminalResult>
       </Terminal>
       <section>
         <h2>Context Window Sorunu</h2>
@@ -35,7 +35,7 @@ export default function MCPServersGuide() {
         <h2>MCP server kullanmazsak context window nasıl?</h2>
         <Terminal title="Claude Code ile MCP Server">
           <TerminalCommand>claude</TerminalCommand>
-          <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+          <TerminalResult>✻ Claude Code&apos;a Hoş Geldiniz! </TerminalResult>
           <TerminalClaude>/context</TerminalClaude>
           <TerminalResult>Context Kullanımı</TerminalResult>
           <TerminalResult>claude-sonnet-4-20250514 • 17k/200k tokens (%9)</TerminalResult>
@@ -46,7 +46,7 @@ export default function MCPServersGuide() {
 
         <Terminal title="Claude Code ile MCP Server">
           <TerminalCommand>claude --mcp-config server/context7.json --mcp-config server/playwright.json  --mcp-config server/sequential-thinking.json --mcp-config server/github.json --mcp-config server/supabase.json</TerminalCommand>
-          <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+          <TerminalResult>✻ Claude Code&apos;a Hoş Geldiniz! </TerminalResult>
           <TerminalClaude>/context</TerminalClaude>
           <TerminalResult>Context Kullanımı</TerminalResult>
           <TerminalResult>claude-sonnet-4-20250514 • 53k/200k tokens (%26)</TerminalResult>
@@ -54,13 +54,13 @@ export default function MCPServersGuide() {
           <TerminalResult>⛶ Boş alan: 147.0k (%73.5)</TerminalResult>
         </Terminal>
         <p>
-          Gördüğünüz gibi 5 adet MCP server' ı kullanmasak bile yüklediğimizde context window %92.7 den %73.5' a düşüyor. 
+          Gördüğünüz gibi 5 adet MCP server&apos;ı kullanmasak bile yüklediğimizde context window %92.7 den %73.5&apos;a düşüyor. 
           İstediğimiz zaman mcp sunucularını yüklememiz çok büyük fayda sağlıyor. İhtiyacınız olduğunda kullanın ve daha yapay zekayı daha verimli kullanın.
         </p>
 
       </section>
       <p>
-        Her oturumda ihtiyacınız olan mcp&apos; yi claude code ile kullanmak için bu github reposunu inceleyebilirsiniz. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
+        Her oturumda ihtiyacınız olan mcp&apos;yi claude code ile kullanmak için bu github reposunu inceleyebilirsiniz. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
       </p>
       <section>
         <h2>Sonuç</h2>

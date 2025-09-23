@@ -53,6 +53,6 @@ export function isValidTag(tag: string): tag is TagKey {
 }
 
 export function getTagKeyBySlug(slug: string): TagKey | undefined {
-  const tagEntry = Object.entries(TAGS).find(([_, tagInfo]) => tagInfo.slug === slug);
+  const tagEntry = Object.entries(TAGS).find(([, tagInfo]) => tagInfo.slug === slug);
   return tagEntry ? tagEntry[0] as TagKey : undefined;
 }

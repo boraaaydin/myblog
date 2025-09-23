@@ -1,5 +1,5 @@
 import ToolTip from "@/components/ToolTip";
-import Terminal, { TerminalClaude, TerminalCommand, TerminalInfo, TerminalResult } from "../Terminal";
+import Terminal, { TerminalClaude, TerminalCommand, TerminalResult } from "../Terminal";
 
 export default function MCPServersGuide() {
   return (
@@ -32,7 +32,7 @@ export default function MCPServersGuide() {
       </section>
 
       <section>
-        <h2>How is window context if don't use MCP servers?</h2>
+        <h2>How is window context if don&apos;t use MCP servers?</h2>
         <Terminal title="Claude Code with MCP Server">
           <TerminalCommand>claude</TerminalCommand>
           <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
@@ -60,7 +60,7 @@ export default function MCPServersGuide() {
 
       </section>
       <p>
-        You can check this GitHub repository to use the MCP' s easily. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
+        You can check this GitHub repository to use the MCP&apos;s easily. <a href="https://github.com/boraaaydin/mcp" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://github.com/boraaaydin/mcp</a>
       </p>
       <section>
         <h2>Conclusion</h2>
