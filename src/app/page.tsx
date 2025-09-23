@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 
 export default function RootPage() {
-  redirect('/blog')
-  
+  redirect('/tr/blog')
+
   return null
 }

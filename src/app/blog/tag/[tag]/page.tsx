@@ -8,7 +8,7 @@ interface TagPageProps {
 
 export default function TagPage({ params }: TagPageProps) {
   const { tag } = params;
-  redirect(`/blog/tr/tag/${tag}`);
+  redirect(`/tr/blog/tag/${tag}`);
 }
 
 export async function generateStaticParams() {

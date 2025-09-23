@@ -3,7 +3,7 @@ import { blogPosts } from '../../lib/posts';
 export const dynamic = 'force-static';
 
 const SITE_URL = 'https://boraaydin.com';
-const BASE_PATH = '/blog';
+const BASE_PATH = '';
 
 export async function GET() {
   const languages = ['tr', 'en'];
@@ -18,12 +18,10 @@ export async function GET() {
   const allTags = Array.from(tagSet);
 
   // Language-specific home pages
-  const languagePages = languages.map(lang => `/${lang}`);
+  const languagePages = languages.map(lang => `/${lang}/blog`);
 
   // Static pages
-  const staticPages = [
-    '/contact'
-  ];
+  const staticPages = languages.map(lang => `/${lang}/blog/contact`);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -42,7 +40,7 @@ export async function GET() {
   ${blogPosts.flatMap(post =>
     languages.map(lang => `
   <url>
-    <loc>${SITE_URL}${BASE_PATH}/${lang}/${post.slug}</loc>
+    <loc>${SITE_URL}/${lang}/blog/${post.slug}</loc>
     <lastmod>${post.date}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -51,7 +49,7 @@ export async function GET() {
   ${allTags.flatMap(tag =>
     languages.map(lang => `
   <url>
-    <loc>${SITE_URL}${BASE_PATH}/${lang}/tag/${encodeURIComponent(tag)}</loc>
+    <loc>${SITE_URL}/${lang}/blog/tag/${encodeURIComponent(tag)}</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>`)
