@@ -23,8 +23,8 @@ export interface BlogPostWithComponents {
 export const blogPostsWithComponents: BlogPostWithComponents[] = [
   {
     id: '2',
-    'slug-tr': 'mcp-sunuculari-claude-code-gizli-gucu',
-    'slug-en': 'mcp-servers-claude-code-hidden-power',
+    'slug-tr': 'mcp-sunuculari-verimli-kullanma',
+    'slug-en': 'mcp-servers-efficient-usage',
     'title-tr': 'Yapay Zekayı Verimli Kullanma: MCP Sunucuları',
     'title-en': 'Using AI Efficiently: MCP Servers',
     'excerpt-tr': 'MCP sunucuları ile yapay zekaya ilave özellikler ekleyebiliyoruz. Claude Code\'un parametrik MCP seçimi ile context window\'u verimli kullanmayı öğrenin.',
