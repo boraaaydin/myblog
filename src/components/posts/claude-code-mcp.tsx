@@ -1,3 +1,5 @@
+import ToolTip from "@/components/ToolTip";
+
 export default function MCPServersGuide() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
@@ -6,7 +8,7 @@ export default function MCPServersGuide() {
       </header>
 
       <p>
-        MCP sunucuları ile yapay zekaya ilave özellikler ekleyebiliyoruz. Ancak kullandığımız MCP sunucuları arttıkça context window azalmaya başlıyor. Claude Code bize her oturumda kullanacağımız MCP serverları parametrik olarak seçebilmemize imkan sağlıyor.
+        <ToolTip keyName="mcp-server">MCP sunucuları</ToolTip> ile yapay zekaya ilave özellikler ekleyebiliyoruz. Ancak kullandığımız MCP sunucuları arttıkça <ToolTip keyName="context-window">context window</ToolTip> azalmaya başlıyor. <ToolTip keyName="claude-code">Claude Code</ToolTip> bize her oturumda kullanacağımız MCP serverları parametrik olarak seçebilmemize imkan sağlıyor.
       </p>
 
 
@@ -14,7 +16,7 @@ export default function MCPServersGuide() {
       <section>
         <h2>Context Window Sorunu</h2>
         <p>
-          Claude Code gibi AI araçlarının başarılı çalışabilmesi için context window'un mümkün mertebe boş olması kritik. Context dolduğunda:
+          <ToolTip keyName="claude-code">Claude Code</ToolTip> gibi AI araçlarının başarılı çalışabilmesi için <ToolTip keyName="context-window">context window</ToolTip>'un mümkün mertebe boş olması kritik. Context dolduğunda:
         </p>
         <ul>
           <li>AI halüsinasyon görmeye başlar</li>
@@ -23,14 +25,7 @@ export default function MCPServersGuide() {
           <li>Performans düşer</li>
         </ul>
         <p>
-          MCP sunucuları bu problemi özel, ihtiyaç anında yüklenen modüller ile çözüyor.
-        </p>
-      </section>
-
-      <section>
-        <h2>MCP Sunucuları Nedir?</h2>
-        <p>
-          MCP (Model Context Protocol) sunucuları, Claude Code'un yeteneklerini genişleten özel yapılandırmalardır. Her biri belirli bir görevi optimize eder ve sadece ihtiyaç duyulduğunda context'e dahil olur.
+          <ToolTip keyName="mcp-server">MCP sunucuları</ToolTip> bu problemi özel, ihtiyaç anında yüklenen modüller ile çözüyor.
         </p>
       </section>
 
