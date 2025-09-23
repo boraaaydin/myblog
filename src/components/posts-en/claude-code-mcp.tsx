@@ -12,9 +12,9 @@ export default function MCPServersGuide() {
         We can add additional features to AI with <ToolTip keyName="mcp-server">MCP servers</ToolTip>. However, as the MCP servers we use increase, the <ToolTip keyName="context-window">context window</ToolTip> starts to decrease. <ToolTip keyName="claude-code">Claude Code</ToolTip> allows us to parametrically select the MCP servers we will use in each session.
       </p>
       <Terminal title="Claude Code with MCP Server">
-          <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
-          <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
-        </Terminal>
+        <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
+        <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
+      </Terminal>
       <section>
         <h2>Context Window Problem</h2>
         <p>
@@ -32,8 +32,8 @@ export default function MCPServersGuide() {
       </section>
 
       <section>
-      <h2>How is window context if don't use MCP servers?</h2>
-      <Terminal title="Claude Code with MCP Server">
+        <h2>How is window context if don't use MCP servers?</h2>
+        <Terminal title="Claude Code with MCP Server">
           <TerminalCommand>claude</TerminalCommand>
           <TerminalResult>✻ Welcome to Claude Code! </TerminalResult>
           <TerminalClaude>/context</TerminalClaude>
@@ -53,9 +53,9 @@ export default function MCPServersGuide() {
           <TerminalResult>⛁ MCP tools: 37.9k tokens (19.0%)</TerminalResult>
           <TerminalResult>⛶ Free space: 147.0k (73.5%)</TerminalResult>
         </Terminal>
-
         <p>
-          The biggest advantage is if you don' t need any MCP server, you don' t need to load any. Use it if you need it. 
+          As you can see, even without using 5 MCP servers, when we load them, the context window drops from 92.7% to 73.5%. 
+          Loading MCP servers whenever we want provides great benefits. Use them when you need them and use AI more efficiently.
         </p>
 
       </section>

@@ -12,9 +12,9 @@ export default function MCPServersGuide() {
         <ToolTip keyName="mcp-server">MCP sunucuları</ToolTip> ile yapay zekaya ilave özellikler ekleyebiliyoruz. Ancak kullandığımız MCP sunucuları arttıkça <ToolTip keyName="context-window">context window</ToolTip> azalmaya başlıyor. <ToolTip keyName="claude-code">Claude Code</ToolTip> bize her oturumda kullanacağımız MCP serverları parametrik olarak seçebilmemize imkan sağlıyor.
       </p>
       <Terminal title="Claude Code ile MCP Server">
-          <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
-          <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
-        </Terminal>
+        <TerminalCommand>claude --mcp-config github.json</TerminalCommand>
+        <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
+      </Terminal>
       <section>
         <h2>Context Window Sorunu</h2>
         <p>
@@ -32,8 +32,8 @@ export default function MCPServersGuide() {
       </section>
 
       <section>
-      <h2>MCP server kullanmazsak context window nasıl?</h2>
-      <Terminal title="Claude Code ile MCP Server">
+        <h2>MCP server kullanmazsak context window nasıl?</h2>
+        <Terminal title="Claude Code ile MCP Server">
           <TerminalCommand>claude</TerminalCommand>
           <TerminalResult>✻ Claude Code'a Hoş Geldiniz! </TerminalResult>
           <TerminalClaude>/context</TerminalClaude>
@@ -53,9 +53,9 @@ export default function MCPServersGuide() {
           <TerminalResult>⛁ MCP araçları: 37.9k tokens (%19.0)</TerminalResult>
           <TerminalResult>⛶ Boş alan: 147.0k (%73.5)</TerminalResult>
         </Terminal>
-
         <p>
-          En büyük avantaj: Herhangi bir MCP server'a ihtiyacınız yoksa hiçbirini yüklemenize gerek yok. İhtiyacınız varsa kullanın.
+          Gördüğünüz gibi 5 adet MCP server' ı kullanmasak bile yüklediğimizde context window %92.7 den %73.5' a düşüyor. 
+          İstediğimiz zaman mcp sunucularını yüklememiz çok büyük fayda sağlıyor. İhtiyacınız olduğunda kullanın ve daha yapay zekayı daha verimli kullanın.
         </p>
 
       </section>
