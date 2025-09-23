@@ -2,7 +2,6 @@ import { TagKey } from './tags';
 import React from 'react';
 
 export interface BaseContent {
-  slug: string;
   title: string;
   excerpt: string;
 }
@@ -17,6 +16,7 @@ export interface BlogPostContentEn extends BaseContent {
 
 export interface BlogPost {
   id: string;
+  slug: string;
   date: string;
   tags: TagKey[];
   readingTime: number;

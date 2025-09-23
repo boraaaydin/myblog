@@ -4,7 +4,8 @@
       "WebFetch(domain:boraaydin.com)",
       "WebFetch(domain:boraaaydin.github.io)",
       "Bash(tree:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
