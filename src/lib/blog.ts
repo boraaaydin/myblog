@@ -1,6 +1,5 @@
 import React from 'react';
-import CommitBestPractices from '../components/posts/CommitBestPractices';
-import { TAGS } from './tags';
+import { blogPosts } from './posts';
 
 export interface BlogPost {
   id: string;
@@ -22,19 +21,6 @@ export interface BlogPostCard {
   readingTime: number;
   slug: string;
 }
-
-export const blogPosts: BlogPost[] = [
-  {
-    id: '1',
-    slug: 'kucuk-commitlerle-buyuk-kazanimlar',
-    title: 'Küçük Commitlerle Büyük Kazanımlar: Geliştirme Sürecinde İyi Alışkanlıklar',
-    excerpt: 'Yazılım geliştirme sürecinde küçük commitler yapmanın önemi, commit öncesi kontrol listesi ve AI CLI araçları ile çalışırken dikkat edilmesi gerekenler.',
-    component: CommitBestPractices,
-    date: '2025-09-12',
-    tags: [TAGS.GIT, TAGS.BEST_PRACTICES, TAGS.DEVELOPMENT, TAGS.JUNIOR_DEVELOPERS],
-    readingTime: 6
-  }
-];
 
 function stripComponent(post: BlogPost): BlogPostCard {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
