@@ -37,7 +37,7 @@ export default function MCPServersGuide() {
         </pre>
 
         <p>
-          The biggest advantage: "You can load a single MCP server before any session" this way you use context efficiently.
+          The biggest advantage: &quot;You can load a single MCP server before any session&quot; this way you use context efficiently.
         </p>
 
       </section>

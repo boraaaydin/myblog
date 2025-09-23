@@ -24,8 +24,8 @@ export interface BlogPostCard {
   language: 'tr' | 'en';
 }
 
-function stripComponentFromPostWithComponents(post: any, language: 'tr' | 'en'): BlogPostCard {
-  const { componentTr, componentEn, 'title-tr': titleTr, 'title-en': titleEn, 'excerpt-tr': excerptTr, 'excerpt-en': excerptEn, 'slug-tr': slugTr, 'slug-en': slugEn, ...basePost } = post;
+function stripComponentFromPostWithComponents(post: typeof blogPostsWithComponents[0], language: 'tr' | 'en'): BlogPostCard {
+  const { 'title-tr': titleTr, 'title-en': titleEn, 'excerpt-tr': excerptTr, 'excerpt-en': excerptEn, 'slug-tr': slugTr, 'slug-en': slugEn, ...basePost } = post;
   return {
     ...basePost,
     title: language === 'tr' ? titleTr : titleEn,

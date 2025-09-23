@@ -12,7 +12,7 @@ export default function CommitBestPractices() {
       <section>
         <h2>Small Commits, Big Benefits</h2>
         <p>
-          Instead of writing code for 5-6 days without making any commits, it makes much more sense to progress in small steps. Here's the ideal process:
+          Instead of writing code for 5-6 days without making any commits, it makes much more sense to progress in small steps. Here&apos;s the ideal process:
         </p>
         <ul>
           <li>Make a small development</li>
@@ -21,7 +21,7 @@ export default function CommitBestPractices() {
           <li>Start your next development with a clean commit state</li>
         </ul>
         <p>
-          This approach has many advantages. First of all, you know exactly what you changed at each step. When there's an error, you can easily find which commit it started in. Code review processes also become much easier.
+          This approach has many advantages. First of all, you know exactly what you changed at each step. When there&apos;s an error, you can easily find which commit it started in. Code review processes also become much easier.
         </p>
       </section>
 
@@ -29,10 +29,10 @@ export default function CommitBestPractices() {
         <h2>Pre-Commit Checklist</h2>
         <p>Following these steps before committing is very beneficial:</p>
         <ol>
-          <li><strong>Check git status</strong> - See which files you've changed</li>
+          <li><strong>Check git status</strong> - See which files you&apos;ve changed</li>
           <li><strong>Review diffs</strong> - Go through each change</li>
           <li><strong>Clean up unnecessary code</strong> - Check if there are test codes, debug lines you added during development</li>
-          <li><strong>Make sure you haven't deviated from your purpose</strong> - Only the changes you planned should be in that commit</li>
+          <li><strong>Make sure you haven&apos;t deviated from your purpose</strong> - Only the changes you planned should be in that commit</li>
         </ol>
       </section>
 
@@ -42,7 +42,7 @@ export default function CommitBestPractices() {
           It happens to us very often during development: while fixing one thing, we notice another problem and want to fix it immediately. At this point, we need to restrain ourselves.
         </p>
         <p>
-          You've made a development, you're getting ready to commit, but suddenly you decide you want to make another development. This is exactly where TODO comments come into play. If you see another problem while developing, don't try to fix it right away. Instead:
+          You&apos;ve made a development, you&apos;re getting ready to commit, but suddenly you decide you want to make another development. This is exactly where TODO comments come into play. If you see another problem while developing, don&apos;t try to fix it right away. Instead:
         </p>
         <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
           <code className="text-sm">
