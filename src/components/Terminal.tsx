@@ -30,7 +30,7 @@ export function TerminalClaude({ children }: TerminalCommandProps) {
 
 export function TerminalCommand({ children }: TerminalCommandProps) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-start">
       <span className="text-gray-500 mr-2">$</span>
       <span className="text-green-400">{children}</span>
     </div>
@@ -47,7 +47,7 @@ export function TerminalInfo({ children }: TerminalInfoProps) {
 
 export function TerminalResult({ children }: TerminalResultProps) {
   return (
-    <div className="text-gray-300">
+    <div className="text-gray-300 ml-5">
       {children}
     </div>
   );
