@@ -33,11 +33,11 @@ export default async function BlogHomePage({ params }: BlogHomePageProps) {
       <Header />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <header className="text-center mb-16">
+        <header className="mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {isTurkish ? 'Blog' : 'Blog'}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             {isTurkish ? (
               <>
                 Her bilgi seviyesindeki geliştiriciye hitap etmek kolay değil. Bir yandan temel kavramları açıklayıp yeni başlayanları desteklemek, diğer yandan deneyimli geliştiricileri sıkmamak gerekiyor. Kimse de fazla uzun yazıları okumak istemiyor.
