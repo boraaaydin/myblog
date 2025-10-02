@@ -5,10 +5,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     lang: string;
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -29,8 +29,8 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const { lang, slug } = params;
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { lang, slug } = await params;
 
   if (lang !== 'tr' && lang !== 'en') {
     notFound();

@@ -6,10 +6,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 interface TagPageProps {
-  params: {
+  params: Promise<{
     lang: string;
     tag: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -40,8 +40,8 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default function TagPage({ params }: TagPageProps) {
-  const { lang, tag } = params;
+export default async function TagPage({ params }: TagPageProps) {
+  const { lang, tag } = await params;
 
   if (lang !== 'tr' && lang !== 'en') {
     notFound();

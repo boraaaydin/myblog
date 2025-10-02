@@ -5,9 +5,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 interface BlogHomePageProps {
-  params: {
+  params: Promise<{
     lang: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -17,8 +17,8 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function BlogHomePage({ params }: BlogHomePageProps) {
-  const { lang } = params;
+export default async function BlogHomePage({ params }: BlogHomePageProps) {
+  const { lang } = await params;
 
   if (lang !== 'tr' && lang !== 'en') {
     notFound();

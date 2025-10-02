@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation';
 
 interface LangPageProps {
-  params: {
+  params: Promise<{
     lang: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -13,8 +13,8 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function LangPage({ params }: LangPageProps) {
-  const { lang } = params;
+export default async function LangPage({ params }: LangPageProps) {
+  const { lang } = await params;
 
   if (lang !== 'tr' && lang !== 'en') {
     redirect('/tr/blog');

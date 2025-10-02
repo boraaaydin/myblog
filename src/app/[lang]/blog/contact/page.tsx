@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation';
 import { translations } from '@/lib/translations';
 
 interface ContactPageProps {
-  params: {
+  params: Promise<{
     lang: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -16,8 +16,8 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function ContactPage({ params }: ContactPageProps) {
-  const { lang } = params;
+export default async function ContactPage({ params }: ContactPageProps) {
+  const { lang } = await params;
 
   if (lang !== 'tr' && lang !== 'en') {
     notFound();
