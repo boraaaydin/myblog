@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getAllPosts } from '@/lib/blog';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ToolTip from '@/components/ToolTip';
 
 interface BlogHomePageProps {
   params: Promise<{
@@ -37,10 +38,27 @@ export default async function BlogHomePage({ params }: BlogHomePageProps) {
             {isTurkish ? 'Blog' : 'Blog'}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {isTurkish
-              ? 'Yazılım geliştirme, yapay zeka ve teknoloji üzerine düşünceler'
-              : 'Thoughts on software development, artificial intelligence, and technology'
-            }
+            {isTurkish ? (
+              <>
+                Her bilgi seviyesindeki geliştiriciye hitap etmek kolay değil. Bir yandan temel kavramları açıklayıp yeni başlayanları desteklemek, diğer yandan deneyimli geliştiricileri sıkmamak gerekiyor. Kimse de fazla uzun yazıları okumak istemiyor.
+                <br /><br />
+                Bu nedenle yazılarımda farklı bir yöntem denedim: Bilinmeyebileceğini düşündüğüm terimlere ipuçları ekledim. Altı çizili kelimelerin üzerine geldiğinizde <ToolTip keyName="context-window">context window</ToolTip> örneğindeki gibi kısa bir açıklama göreceksiniz.
+                <br /><br />
+                Böylece herkes kendi hızında, kendi ihtiyacına göre okuyabiliyor.
+                <br />
+                Keyifli okumalar!
+              </>
+            ) : (
+              <>
+                Writing for developers at different skill levels isn't easy. On one hand, you need to explain fundamental concepts to support beginners; on the other, you don't want to bore experienced developers. And nobody wants to read overly long articles.
+                <br /><br />
+                That's why I tried a different approach in my posts: I added tooltips to terms that might be unfamiliar. When you hover over underlined words, you'll see a brief explanation, just like this <ToolTip keyName="context-window">context window</ToolTip> example.
+                <br /><br />
+                This way, everyone can read at their own pace, according to their own needs.
+                <br />
+                Happy reading!
+              </>
+            )}
           </p>
         </header>
 
