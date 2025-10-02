@@ -114,3 +114,7 @@ Junior developers may not be familiar with certain technical terms. Create toolt
 - Example: If the blog post mentions "commit" (which is Git-related), create the tooltip key name as git-commit
 - Key naming convention: Use English for all tooltip key names
 - If same tooltip is written in text, don't add tooltip in the headers
+
+### Rules for Creating Blog Pages
+
+- Don' t fill blog page when asked to create one. Add single title and paragraph with Lorem Ipsum.

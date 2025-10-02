@@ -1,12 +1,32 @@
 import CommitBestPracticesTr from '../components/posts-tr/CommitBestPractices';
 import MCPServersGuideTr from '../components/posts-tr/claude-code-mcp';
 import DevOpsForBeginnersTr from '../components/posts-tr/devops-for-beginners';
+import DockerSwarmDeploymentTr from '../components/posts-tr/docker-swarm-deployment';
 import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
 import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
 import DevOpsForBeginnersEn from '../components/posts-en/devops-for-beginners';
+import DockerSwarmDeploymentEn from '../components/posts-en/docker-swarm-deployment';
 import { BlogPost } from './types';
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: '4',
+    slug: 'docker-swarm-deployment',
+    date: '2025-10-02',
+    tags: ['DOCKER', 'DEVOPS', 'DEPLOYMENT', 'JUNIOR_DEVELOPERS'],
+    readingTime: 8,
+    draft: true,
+    tr: {
+      title: 'Docker Swarm ile Uygulama Yükleme',
+      excerpt: 'Docker Swarm kullanarak uygulamanızı nasıl yükleyeceğinizi ve yöneteceğinizi adım adım öğrenin.',
+      component: DockerSwarmDeploymentTr
+    },
+    en: {
+      title: 'Deploying Applications with Docker Swarm',
+      excerpt: 'Learn step by step how to deploy and manage your application using Docker Swarm.',
+      component: DockerSwarmDeploymentEn
+    }
+  },
   {
     id: '3',
     slug: 'devops-for-beginners',

@@ -48,9 +48,9 @@ export default async function BlogHomePage({ params }: BlogHomePageProps) {
               </>
             ) : (
               <>
-                Writing for developers at different skill levels isn't easy. On one hand, you need to explain fundamental concepts to support beginners; on the other, you don't want to bore experienced developers. And nobody wants to read overly long articles.
+                Writing for developers at different skill levels isn't easy. On one hand, you need to explain fundamental concepts to support beginners; on the other, you don&apos;t want to bore experienced developers. And nobody wants to read overly long articles.
                 <br /><br />
-                That's why I tried a different approach in my posts: I added tooltips to terms that might be unfamiliar. When you hover over underlined words, you'll see a brief explanation, just like this <ToolTip keyName="context-window">context window</ToolTip> example.
+                That's why I tried a different approach in my posts: I added tooltips to terms that might be unfamiliar. When you hover over underlined words, you&apos;ll see a brief explanation, just like this <ToolTip keyName="context-window">context window</ToolTip> example.
                 <br /><br />
                 Happy reading!
               </>

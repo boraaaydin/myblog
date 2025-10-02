@@ -38,6 +38,16 @@ export const TAGS = {
     slug: 'deployment',
     tr: 'Deployment',
     en: 'Deployment'
+  },
+  DOCKER: {
+    slug: 'docker',
+    tr: 'Docker',
+    en: 'Docker'
+  },
+  DEVOPS: {
+    slug: 'devops',
+    tr: 'DevOps',
+    en: 'DevOps'
   }
 } as const;
 

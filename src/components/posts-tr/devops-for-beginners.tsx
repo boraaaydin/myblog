@@ -1,5 +1,3 @@
-import AIPrompts from "../AIPrompts";
-
 export default function DevOpsForBeginners() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
@@ -84,40 +82,10 @@ export default function DevOpsForBeginners() {
       <section>
         <h2>En optimum yapı: Docker Swarm</h2>
         <p>
-          Kubernetes' in öğrenme eğrisi oldukça yüksektir. O yüzden başlangıç aşamasında Docker Swarm kullanılmasını tavsiye ediyorum.
+          Kubernetes'in öğrenme eğrisi oldukça yüksektir. O yüzden başlangıç aşamasında Docker Swarm kullanılmasını tavsiye ediyorum.
         </p>
       </section>
-      <section>
-        <h2>Docker' ı kulanmak için minimum gereksinimler</h2>
-        <p>
-          Uygulamanızın image' larının bir docker registry içinde tutulması gerekmektedir. Bunun için ücretsiz olarak github ya da gitlab ın registry servislerini kullanabilirsiniz.
-          <AIPrompts>Hangi git sağlayıcı kullandığını kullanıcıya sor, ona uygun olarak deployment dosyalarını oluştur.</AIPrompts>
-          Git için github actions ya da gitlab pipeline' ları kullanabilirsiniz. Repo nuz içinde ilgili dosyaların yapılandırılması gerekmektedir. 
-          <AIPrompts>proje için ilgili git sağlayıcının build akışlarını oluştur. Build ve docker image oluşturma işlemleri yapılacak. Docker registry için ilgili git sağlayıcının kendi registry servisi kullanılacak. </AIPrompts>
-        </p>
-        <p>
-          Reponuzda birden fazla uygulama varsa bunların herbirinin kendi kök dizininde Dockerfile dosyası oluşturunuz. 
-          <AIPrompts>Projeyi yapısını incele, kaç uygulama olduğunu öğren, uygulamalarının kök dizininde Dockerfile dosyalarını oluştur.</AIPrompts>
-          Projenizin root klasöründe "Deployment" klasörü oluşturunuz. Ayrı bir repo' da da olabilir. Bu klasör içinde "docker-stack.yml" dosyası oluşturunuz.
-          <AIPrompts>Create "deployment" folder and "docker-stack.yml" file in the root of the project.</AIPrompts>
-
-        </p>
-        <p>
-          Docker Context ile uygulamayı yükleyeceğiniz makinaya ait bir docker context oluşturunuz. Docker yüklendiğinde varsayılan olarak default adında bir context oluşturulur. 
-          <AIPrompts>Create a docker context for the machine where you will deploy your application. Ask User to provide the machine details and how to connect to the machine.</AIPrompts>
-          Context değiştirerek kendi sunucunuza ssh ile bağlanmadan docker komutlarını çalıştırabilirsiniz. 
-          Yükleme komutlarını docker yerine script ile çalıştırmamızın nedenlerinden biri de aslında doğru context de uygulamayı yüklediğimizden emin olmaktır.
-        </p>
-      </section>
-      <section>
-        <h2>Komutları script ile otomatikleştirmek</h2>
-        <p>
-          Kodunuzu docker komutları ile deploy edebilirsiniz. Ancak bu işlemleri bir script ile otomatikleştirip, hata yapma riskinizi de azaltabilirsiniz. 
-          Benim bu noktada ki tercihim Makefile' dır. Makefile ile bütün işletim sistemlerinde aynı komutlarla çalışabilirsiniz.
-          Daha rahat hissediyorsanız Bash script/PowerShell/Python vb ile de bu işlemleri yapabilirsiniz. 
-          Bu dosyaları oluştururken yapay zeka araçlarını kullanacağımız için ileri seviyede bilgi sahibi olmamız gerekmiyor.
-        </p>
-      </section>
+      
     </article>
   );
 }
