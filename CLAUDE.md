@@ -103,3 +103,14 @@ The project is configured for GitHub Pages deployment:
 - Live site will be served in https://boraaydin.com/blog/
 - Local address will be http://localhost:3000/blog
 - Sitemap available at https://boraaydin.com/blog/sitemap.xml
+
+## Tooltips
+
+Junior developers may not be familiar with certain technical terms. Create tooltips for these terms within the blog posts.
+
+### Rules for Creating Tooltips
+
+- Each tooltip must include both Turkish and English translations
+- Example: If the blog post mentions "commit" (which is Git-related), create the tooltip key name as git-commit
+- Key naming convention: Use English for all tooltip key names
+- If same tooltip is written in text, don't add tooltip in the headers

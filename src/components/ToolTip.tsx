@@ -2,6 +2,7 @@
 
 import { ReactNode, useState } from "react";
 import { getTooltipContent } from "@/lib/tooltip-content";
+import { usePathname } from "next/navigation";
 
 interface ToolTipProps {
   keyName: string;
@@ -10,7 +11,11 @@ interface ToolTipProps {
 
 export default function ToolTip({ keyName, children }: ToolTipProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const content = getTooltipContent(keyName);
+  const pathname = usePathname();
+
+  // Determine language from pathname (e.g., /blog/en/post-slug or /blog/tr/post-slug)
+  const lang = pathname?.includes("/en/") ? "en" : "tr";
+  const content = getTooltipContent(keyName, lang);
 
   if (!content) {
     return <span>{children}</span>;
