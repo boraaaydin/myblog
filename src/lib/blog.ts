@@ -40,13 +40,16 @@ function stripComponentFromPost(post: BlogPostType, language: 'tr' | 'en'): Blog
 }
 
 export function getAllPosts(language?: 'tr' | 'en'): BlogPostCard[] {
+  const showDraft = process.env.NEXT_PUBLIC_SHOW_DRAFT === 'true';
   return blogPosts
+    .filter(post => showDraft || !post.draft)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map(post => stripComponentFromPost(post, language || 'tr'));
 }
 
 export function getPostBySlug(slug: string, language?: 'tr' | 'en'): BlogPostFlat | undefined {
-  const post = blogPosts.find(post => post.slug === slug);
+  const showDraft = process.env.NEXT_PUBLIC_SHOW_DRAFT === 'true';
+  const post = blogPosts.find(post => post.slug === slug && (showDraft || !post.draft));
 
   if (!post) {
     return undefined;
@@ -68,6 +71,7 @@ export function getPostBySlug(slug: string, language?: 'tr' | 'en'): BlogPostFla
 }
 
 export function getPostsByTag(tag: TagKey, language?: 'tr' | 'en'): BlogPostCard[] {
-  const filteredPosts = blogPosts.filter(post => post.tags.includes(tag));
+  const showDraft = process.env.NEXT_PUBLIC_SHOW_DRAFT === 'true';
+  const filteredPosts = blogPosts.filter(post => post.tags.includes(tag) && (showDraft || !post.draft));
   return filteredPosts.map(post => stripComponentFromPost(post, language || 'tr'));
 }

@@ -22,4 +22,5 @@ export interface BlogPost {
   readingTime: number;
   tr: BlogPostContentTr;
   en: BlogPostContentEn;
+  draft?: boolean;
 }
