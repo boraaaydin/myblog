@@ -33,6 +33,11 @@ export const TAGS = {
     slug: 'claude-code',
     tr: 'Claude Code',
     en: 'Claude Code'
+  },
+  DEPLOYMENT: {
+    slug: 'deployment',
+    tr: 'Deployment',
+    en: 'Deployment'
   }
 } as const;
 

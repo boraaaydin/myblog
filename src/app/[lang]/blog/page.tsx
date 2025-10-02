@@ -44,8 +44,6 @@ export default async function BlogHomePage({ params }: BlogHomePageProps) {
                 <br /><br />
                 Bu nedenle yazılarımda farklı bir yöntem denedim: Bilinmeyebileceğini düşündüğüm terimlere ipuçları ekledim. Altı çizili kelimelerin üzerine geldiğinizde <ToolTip keyName="context-window">context window</ToolTip> örneğindeki gibi kısa bir açıklama göreceksiniz.
                 <br /><br />
-                Böylece herkes kendi hızında, kendi ihtiyacına göre okuyabiliyor.
-                <br />
                 Keyifli okumalar!
               </>
             ) : (
@@ -54,8 +52,6 @@ export default async function BlogHomePage({ params }: BlogHomePageProps) {
                 <br /><br />
                 That's why I tried a different approach in my posts: I added tooltips to terms that might be unfamiliar. When you hover over underlined words, you'll see a brief explanation, just like this <ToolTip keyName="context-window">context window</ToolTip> example.
                 <br /><br />
-                This way, everyone can read at their own pace, according to their own needs.
-                <br />
                 Happy reading!
               </>
             )}

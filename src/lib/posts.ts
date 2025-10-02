@@ -1,10 +1,30 @@
 import CommitBestPracticesTr from '../components/posts-tr/CommitBestPractices';
 import MCPServersGuideTr from '../components/posts-tr/claude-code-mcp';
+import DevOpsForBeginnersTr from '../components/posts-tr/devops-for-beginners';
 import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
 import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
+import DevOpsForBeginnersEn from '../components/posts-en/devops-for-beginners';
 import { BlogPost } from './types';
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: '3',
+    slug: 'devops-for-beginners',
+    date: '2025-10-02',
+    tags: ['DEPLOYMENT', 'JUNIOR_DEVELOPERS'],
+    readingTime: 5,
+    draft: true,
+    tr: {
+      title: 'Yeni Başlayanlar İçin DevOps Stratejileri',
+      excerpt: 'DevOps dünyasına yeni başlayanlar için temel kavramlar ve pratik öneriler.',
+      component: DevOpsForBeginnersTr
+    },
+    en: {
+      title: 'DevOps for Beginners',
+      excerpt: 'Fundamental concepts and practical recommendations for those new to the DevOps world.',
+      component: DevOpsForBeginnersEn
+    }
+  },
   {
     id: '2',
     slug: 'mcp-servers-efficient-usage',
