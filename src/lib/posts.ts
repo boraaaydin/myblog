@@ -19,7 +19,6 @@ export const blogPosts: BlogPost[] = [
     date: '2025-10-17',
     tags: ['GIT', 'BEST_PRACTICES', 'JUNIOR_DEVELOPERS'],
     readingTime: 5,
-    draft: true,
     tr: {
       title: 'Başlangıç Seviyesi Git Kullanımı',
       excerpt: 'Yeni başlayanlar için Git versiyon kontrol sistemi kullanımı: temel komutlar, workflow ve en iyi uygulamalar.',
@@ -37,7 +36,6 @@ export const blogPosts: BlogPost[] = [
     date: '2025-10-17',
     tags: ['BEST_PRACTICES', 'DEVELOPMENT', 'JUNIOR_DEVELOPERS'],
     readingTime: 5,
-    draft: true,
     tr: {
       title: 'Yeni Yazılımcılar İçin Tavsiyeler',
       excerpt: 'Yazılıma yeni başlayanlar için pratik tavsiyeler: çalışma saatleri, öğrenme stratejileri ve başarılı olma yolları.',
