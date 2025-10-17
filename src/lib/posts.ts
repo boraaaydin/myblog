@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['BEST_PRACTICES', 'DEVELOPMENT', 'JUNIOR_DEVELOPERS'],
     readingTime: 5,
     tr: {
-      title: 'Yeni Yazılımcılar İçin Tavsiyeler',
+      title: 'Yazılıma Yeni Başlayanlar İçin Tavsiyeler',
       excerpt: 'Yazılıma yeni başlayanlar için pratik tavsiyeler: çalışma saatleri, öğrenme stratejileri ve başarılı olma yolları.',
       component: AdviceForNewDevelopersTr
     },

@@ -3,9 +3,6 @@ import BlogLink from "@/components/BlogLink";
 export default function AdviceForNewDevelopers() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-      <header>
-        <h1>Yazılıma Yeni Başlayanlar İçin Tavsiyeler</h1>
-      </header>
       <p>
         Çalışma saatini maksimize etmen senin faydana olur, şu kadar saat çalış diyemem ama 10bin saat kuralı burda da işler. O saati ne kadar hızlı doldurursan kariyerinde o kadar hızlı ilerlersin.
       </p>
@@ -20,7 +17,7 @@ export default function AdviceForNewDevelopers() {
         Belirli teknolojileri öğrenip kendini geliştirmeden çalışman pekala mümkün ama çok parlak bir kariyerin olmayacaktır. O yüzden öncelikli olarak işini sevmen ve iş hayatın dışında kendini geliştirmeye vakit ayırman gerekir. Bunun bilincinde ilerle.
       </p>
       <p>
-        Hangi dili öğrendiğinizin çoğu zaman bir önemi yoktur. Her dilin belirli bir potansiyel pazarı vardır. Ancak yine de çok talep edilen dilleri seçmek mantıklıdır.
+        Hangi dili öğrendiğinin çoğu zaman bir önemi yoktur. Her dilin belirli bir potansiyel pazarı vardır. Ancak yine de çok talep edilen dilleri seçmek mantıklıdır.
         <a href="https://survey.stackoverflow.co/">Stackoverflow gibi surveyleri</a> inceleyerek hangi dillerin daha çok talep edildiğini görebilirsin.
       </p>
       <p>
@@ -30,14 +27,14 @@ export default function AdviceForNewDevelopers() {
         Hangi dili öğrenirsen öğren, git aracını ilk günden temel özellikleriyle kullanmaya başla. <BlogLink href="/blog/beginner-git-usage">Git aracının temel kullanımını</BlogLink> başlıklı blog yazımı okuyabilirsin.
       </p>
       <p>
-        Okuduğun okul ve bölüm, kariyerinin ilk yıllarında önemlidir, birkaç işte çalıştıktan sonra önemini kaybeder. Yazılım ya da bilgisayar mühendisliği okumanız şart değildir. Okusanız da işe girmenizi garanti etmez.
-        Okumadıysanız başta bir dezavantajınız vardır evet. Biraz özveriyle ilk iş tecrübelerinizi elde etmeye çalışın.
+        Okuduğun okul ve bölüm, kariyerinin ilk yıllarında önemlidir, birkaç işte çalıştıktan sonra önemini kaybeder. Yazılım ya da bilgisayar mühendisliği okuman şart değildir. Okusan da işe girmeni garanti etmez.
+        Okumadıysan başta bir dezavantajın vardır evet. Biraz özveriyle ilk iş tecrübelerini elde etmeye çalış.
       </p>
       <p>
-        Yan proje yapın. Sizi heyecanlandıran bir konu bulun. Çevrenizde bir ihtiyaç görün ve onunla ilgili bir projeye başlayın. 
+        Yan proje yap. Seni heyecanlandıran bir konu bul. Çevrende bir ihtiyaç gör ve onunla ilgili bir projeye başla. 
       </p>
       <p>
-        Bir açık kaynak projesine katkıda bulunmaya çalışın. <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a> de xyz konusuyla ilgili açık kaynak bir dotnet projesi araştır şeklinde arama yapabilirsiniz.
+        Bir açık kaynak projesine katkıda bulunmaya çalış. <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a> de xyz konusuyla ilgili açık kaynak bir dotnet projesi araştır şeklinde arama yapabilirsin.
       </p>
       <p>
         Evet ingilizce önemli. Trendi takip etmek ve yeni şeyler öğrenmek için ağırlıklı olarak Youtube' da ingilizce kaynaklar takip ediyorum. Okuduğunu ve dinlediğini anlayacak kadar ingilizce bilmek gerekiyor.

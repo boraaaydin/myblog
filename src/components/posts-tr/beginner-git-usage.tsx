@@ -1,10 +1,6 @@
 export default function BeginnerGitUsage() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-      <header>
-        <h1>Başlangıç Seviyesi Git Kullanımı</h1>
-      </header>
-
       <p>
         Git versiyon kontrol sistemi yazılım kariyeriniz boyunca sürekli kullanacağınız bir araçtır. Birkaç saatlik temel bir eğitim ile git'i kullanmaya başlarsanız yazılım öğrenme sürecinize de katkı sağlar. 
         Ormana girmeden baltanızı keskin hale getirmek için biraz zaman ayırın.
