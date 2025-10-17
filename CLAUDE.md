@@ -129,6 +129,32 @@ import BlogLink from "@/components/BlogLink";
 - Turkish page: renders as `/tr/blog/beginner-git-usage`
 - English page: renders as `/en/blog/beginner-git-usage`
 
+## Code Component
+
+For inline code snippets within blog posts, use the `Code` component instead of regular `<code>` tags.
+
+### Code Component
+
+The `Code` component provides consistent styling for inline code across light and dark modes.
+
+**Usage:**
+```tsx
+import Code from "@/components/Code";
+
+<Code>git status</Code>
+```
+
+**Features:**
+- Automatically adapts to light and dark modes using CSS variables
+- Light mode: Light gray background (#f3f4f6) with black text (#000000)
+- Dark mode: Dark gray background (#374151) with light gray text (#e5e7eb)
+- Consistent typography using monospace font
+- Proper padding and border radius for readability
+
+**Important:**
+- Use `Code` component for inline code snippets (e.g., command names, variable names, short code)
+- For multi-line code blocks, use standard `<pre><code>` tags which are styled by global CSS
+
 ## Tooltips
 
 Junior developers may not be familiar with certain technical terms. Create tooltips for these terms within the blog posts.

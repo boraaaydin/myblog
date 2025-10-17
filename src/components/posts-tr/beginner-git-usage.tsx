@@ -1,4 +1,5 @@
 import ToolTip from "@/components/ToolTip";
+import Code from "@/components/Code";
 
 export default function BeginnerGitUsage() {
   return (
@@ -33,11 +34,11 @@ export default function BeginnerGitUsage() {
         Aşağıdaki temel komutları bilmeniz yeterli olacaktır:
       </p>
       <ul>
-        <li><code>git status</code>: Projenizin mevcut durumunu görüntüler</li>
-        <li><code>git add .</code>: Bütün değişiklikleri <ToolTip keyName="git-staging-area">staging area</ToolTip>'ya alır</li>
-        <li><code>git add FILE_NAME</code>: Belirli bir dosyanın değişikliklerini staging area'ya alır</li>
-        <li><code>git commit -m "mesaj"</code>: Değişiklikleri mesajla birlikte kaydeder</li>
-        <li><code>git revert COMMIT_HASH</code>: Belirli bir commit'i geri alır</li>
+        <li><Code>git status</Code>: Projenizin mevcut durumunu görüntüler</li>
+        <li><Code>git add .</Code>: Bütün değişiklikleri <ToolTip keyName="git-staging-area">staging area</ToolTip>'ya alır</li>
+        <li><Code>git add FILE_NAME</Code>: Belirli bir dosyanın değişikliklerini staging area'ya alır</li>
+        <li><Code>git commit -m "mesaj"</Code>: Değişiklikleri mesajla birlikte kaydeder</li>
+        <li><Code>git revert COMMIT_HASH</Code>: Belirli bir commit'i geri alır</li>
       </ul>
 
       <h2>Branch Kullanımı</h2>
@@ -70,7 +71,7 @@ export default function BeginnerGitUsage() {
       <h2>Geliştirme Sırasında Dikkat Edilmesi Gerekenler</h2>
       <p>
         Bir özellik geliştirirken başka bir sorun görürseniz, hemen o anda düzeltmeye çalışmayın.
-        Bunun yerine <code>//TODO</code> yorumu ekleyerek not alın ve sonra düzeltmeye çalışın.
+        Bunun yerine <Code>//TODO</Code> yorumu ekleyerek not alın ve sonra düzeltmeye çalışın.
         Bu yaklaşım, odaklanmanızı korur ve commit'lerinizi mantıksal olarak ayrı tutar.
       </p>
 
