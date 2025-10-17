@@ -104,6 +104,31 @@ The project is configured for GitHub Pages deployment:
 - Local address will be http://localhost:3000/blog
 - Sitemap available at https://boraaydin.com/blog/sitemap.xml
 
+## Internal Blog Links
+
+When linking to other blog posts within the blog content, use the `BlogLink` component instead of regular `<a>` tags or Next.js `Link` components.
+
+### BlogLink Component
+
+The `BlogLink` component automatically handles language-aware routing for internal blog links.
+
+**Usage:**
+```tsx
+import BlogLink from "@/components/BlogLink";
+
+<BlogLink href="/blog/beginner-git-usage">Link Text</BlogLink>
+```
+
+**Features:**
+- Automatically prepends the current language (`tr` or `en`) to the href
+- Uses `LanguageContext` to detect the current language
+- Built on top of Next.js `Link` for optimal performance and SEO
+- Supports all standard link attributes (className, etc.)
+
+**Example:**
+- Turkish page: renders as `/tr/blog/beginner-git-usage`
+- English page: renders as `/en/blog/beginner-git-usage`
+
 ## Tooltips
 
 Junior developers may not be familiar with certain technical terms. Create tooltips for these terms within the blog posts.

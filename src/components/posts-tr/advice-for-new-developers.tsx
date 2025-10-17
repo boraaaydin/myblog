@@ -1,4 +1,4 @@
-import ToolTip from "@/components/ToolTip";
+import BlogLink from "@/components/BlogLink";
 
 export default function AdviceForNewDevelopers() {
   return (
@@ -27,7 +27,7 @@ export default function AdviceForNewDevelopers() {
         CLI araçlarını kullanmaya çalış. Terminal senin en yakın arkadaşın.
       </p>
       <p>
-        Hangi dili öğrenirsen öğren, git aracını ilk günden temel özellikleriyle kullanmaya başla. <a href="/blog/beginner-git-usage">Git aracının temel kullanımını</a> başlıklı blog yazımı okuyabilirsin.
+        Hangi dili öğrenirsen öğren, git aracını ilk günden temel özellikleriyle kullanmaya başla. <BlogLink href="/blog/beginner-git-usage">Git aracının temel kullanımını</BlogLink> başlıklı blog yazımı okuyabilirsin.
       </p>
       <p>
         Okuduğun okul ve bölüm, kariyerinin ilk yıllarında önemlidir, birkaç işte çalıştıktan sonra önemini kaybeder. Yazılım ya da bilgisayar mühendisliği okumanız şart değildir. Okusanız da işe girmenizi garanti etmez.

@@ -1,4 +1,4 @@
-import ToolTip from "@/components/ToolTip";
+import BlogLink from "@/components/BlogLink";
 
 export default function AdviceForNewDevelopers() {
   return (
@@ -28,7 +28,7 @@ export default function AdviceForNewDevelopers() {
         Try to use CLI tools. The terminal is your closest friend.
       </p>
       <p>
-        Whichever language you learn, start using git with its basic features from day one. You can read my blog post titled <a href="/blog/beginner-git-usage">Basic Git Usage</a>.
+        Whichever language you learn, start using git with its basic features from day one. You can read my blog post titled <BlogLink href="/blog/beginner-git-usage">Basic Git Usage</BlogLink>.
       </p>
       <p>
         The school and major you attend matter in the early years of your career, but lose importance after working at a few jobs. It's not mandatory to study software or computer engineering. Even if you do study them, it doesn't guarantee you'll get a job.
