@@ -1,57 +1,99 @@
+import ToolTip from "@/components/ToolTip";
+
 export default function BeginnerGitUsage() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
       <p>
-        Git versiyon kontrol sistemi yazılım kariyeriniz boyunca sürekli kullanacağınız bir araçtır. Birkaç saatlik temel bir eğitim ile git'i kullanmaya başlarsanız yazılım öğrenme sürecinize de katkı sağlar. 
+        <ToolTip keyName="git">Git</ToolTip>, yazılım kariyeriniz boyunca sürekli kullanacağınız en önemli araçlardan biridir.
+        Birkaç saatlik temel eğitimle Git'i kullanmaya başlamak, yazılım öğrenme sürecinize büyük katkı sağlayacaktır.
         Ormana girmeden baltanızı keskin hale getirmek için biraz zaman ayırın.
       </p>
+
+      <h2>Görsel Arayüz ile Başlayın</h2>
       <p>
-        Çoğu IDE' de git için görsel bir arayüz bulunmaktadır. Başlangıç için bu arayüzü kullanabilirsiniz.
-        Visual Studio Code üzerinden ayrıntıya çok girmeden temel konseptlerden bahsedeceğim.
+        Çoğu <ToolTip keyName="ide">IDE</ToolTip>'de Git için görsel bir arayüz bulunmaktadır.
+        Bu yazıda Visual Studio Code üzerinden, ayrıntıya çok girmeden temel konseptleri açıklayacağım.
+      </p>
+
+      <h2>İlk Günden İtibaren Git Kullanın</h2>
+      <p>
+        Ne proje yaparsanız yapın, projede Git'i ilk günden kullanmaya başlayın.
+        Git local-first bir versiyon kontrol sistemidir; yani GitHub gibi bir uzak depoya bağlamadan da kullanabilirsiniz.
       </p>
       <p>
-        Ne proje yaparsanız yapın projede git'i ilk günden kullanın. Git local first bir versiyon aracıdır. Github gibi bir depoya bağlamadan kullanabilirsiniz.
+        Projenizin hangi aşamasında olursanız olun, Visual Studio Code'da Source Control panelinde
+        "Initialize Repository" butonuna tıklayarak bir Git <ToolTip keyName="git-repository">repository</ToolTip> oluşturabilirsiniz.
+        Artık projede yapacağınız değişiklikleri Git ile kaydedebilirsiniz.
       </p>
+
+      <h2>Temel Git Komutları</h2>
       <p>
-        Projenizin hangi anında olursanız olup, Visual Studio Code' da Source Control panelinde "Initialize Repository" butonu ile bir git repository oluşturabilirsiniz. 
-        Artık projede yapacağınız değişiklikleri git ile kaydedebilirsiniz.
+        Görsel arayüz üzerinden Git'i kullanabilsek de, bazı komutları sadece terminalden çalıştırabiliriz.
+        Bu yüzden <ToolTip keyName="cli">CLI</ToolTip> komutlarını da öğrenmek gerekir.
+        Aşağıdaki temel komutları bilmeniz yeterli olacaktır:
       </p>
+      <ul>
+        <li><code>git status</code>: Projenizin mevcut durumunu görüntüler</li>
+        <li><code>git add .</code>: Bütün değişiklikleri <ToolTip keyName="git-staging-area">staging area</ToolTip>'ya alır</li>
+        <li><code>git add FILE_NAME</code>: Belirli bir dosyanın değişikliklerini staging area'ya alır</li>
+        <li><code>git commit -m "mesaj"</code>: Değişiklikleri mesajla birlikte kaydeder</li>
+        <li><code>git revert COMMIT_HASH</code>: Belirli bir commit'i geri alır</li>
+      </ul>
+
+      <h2>Branch Kullanımı</h2>
       <p>
-        Her ne kadar görsel arayüz üzerinden git'i kullanabilirsek de, bazı komutları sadece terminalden çalıştırabildiğimiz için cli komutlarını da bilmek gerekiyor. 
-        Bunlardan add ve commit komutlarını arayüzden de yapabiliyoruz.
-        <ul>
-          <li>git status: Projenizin durumunu görüntüler.</li>
-          <li>git add . : Bütün değişiklikleri stage' e alır.</li>
-          <li>git add FILE_NAME: Belirli bir dosyanın değişikliklerini stage' e alır.</li>
-          <li>git commit: Değişiklikleri kaydeder.</li>
-          <li>git revert COMMIT_HASH_ID: Değişiklikleri geri alır.</li>
-        </ul>
+        Özellikle projede tek başınıza çalışıyorsanız, başlangıç aşamasında <ToolTip keyName="git-branch">branch</ToolTip> kullanmanıza gerek yoktur.
+        İlerleyen dönemlerde takım çalışmalarında branch'lerin önemini göreceksiniz.
       </p>
+
+      <h2>Commit Alışkanlıkları</h2>
       <p>
-        Özellikle projede tek başınıza çalışıyorsanız başlangıç aşamasında branch' leri kullanmanıza çok gerek yoktur.
+        Yaptığınız küçük geliştirmelerden sonra <ToolTip keyName="git-commit">commit</ToolTip> yapmayı alışkanlık haline getirin.
+        İşte commit yaparken dikkat etmeniz gerekenler:
       </p>
+      <ul>
+        <li><strong>Küçük commit'ler yapın:</strong> Her commit tek bir mantıksal değişikliği içermeli</li>
+        <li><strong>Açıklayıcı mesajlar yazın:</strong> Neyi değiştirdiğinizi net olarak belirtin</li>
+        <li><strong>Kod incelemesi yapın:</strong> Her commit öncesi changes kısmından kodlarınızı gözden geçirin</li>
+        <li><strong>Test edin:</strong> Commit yapmadan önce kodunuzun çalıştığından emin olun</li>
+      </ul>
+
       <p>
-        Yaptığınız ufak geliştirmelerden sonra commit yapmayı alışkanlık haline getir. Commit mesajınızı yazarken neyi değiştirdiğinizi net olarak belirtin. Commitlerinizi küçük tutun. 
-        Geliştirme yaparken kodda çok fazla değişiklik yapmanız gerekecektir. Eğer git changes de az değişiklik varsa kodunuzu gözden geçirmeniz kolay olacaktır. 
-        Ayrıca yaptığınız değişiklikleri iptal etmeniz gerekirse tek komutla iptal edip çalışan son duruma dönmeniz de kolay olacaktır.
+        Küçük commit'lerin avantajları:
       </p>
+      <ul>
+        <li>Kod değişikliklerini gözden geçirmek daha kolay olur</li>
+        <li>Hata yaptığınızda sadece son commit'i geri alarak çalışan duruma dönebilirsiniz</li>
+        <li>Commit geçmişi daha anlaşılır olur</li>
+      </ul>
+
+      <h2>Geliştirme Sırasında Dikkat Edilmesi Gerekenler</h2>
       <p>
-        Her committen önce changes kısmından kodlarını gözden geçirin. 
+        Bir özellik geliştirirken başka bir sorun görürseniz, hemen o anda düzeltmeye çalışmayın.
+        Bunun yerine <code>//TODO</code> yorumu ekleyerek not alın ve sonra düzeltmeye çalışın.
+        Bu yaklaşım, odaklanmanızı korur ve commit'lerinizi mantıksal olarak ayrı tutar.
       </p>
+
+      <h2>Yapay Zeka ile Çalışırken Git Kullanımı</h2>
       <p>
-        Yaptığınız geliştirmelerinizi test edin. Çalıştığından emin olduktan sonra commit yapın.
+        Yapay zeka destekli kod geliştirirken, değişiklikleri kontrollü bir şekilde yönetmek önemlidir.
+        Şu akışı takip edin:
       </p>
+      <ol>
+        <li>Mevcut kodunuzu staging area'ya alın ama commit yapmayın</li>
+        <li>Yapay zekaya kodunuzu düzelttirin ve çalışır hale getirin</li>
+        <li>Changes panelinde staging area'ya alınmamış değişiklikleri gözden geçirin</li>
+        <li>Yapay zekanın yaptığı değişiklikleri dikkatlice inceleyin</li>
+        <li>
+          Değişiklikler uygunsa, yeni geliştirmeleri staging area'ya alarak commit yapın.
+          Uygun değilse, sadece yapay zekanın yaptığı değişiklikleri "Discard Changes" ile geri alabilirsiniz -
+          kendi yazdığınız kod staging area'da güvende kalır
+        </li>
+      </ol>
+
       <p>
-        Bir feature geliştirirken başka bir sorun görürseniz, hemen o anda düzeltmeye çalışmayın. Bunun yerine //TODO yorumu ekleyerek daha sonra düzeltmeye çalışın.
-      </p>
-      <p>
-        Özellikle yapay zekayı kullanırken belirli bir noktaya kadar gelmişseniz ve sonrasında yapay zekaya kodu düzelttirecekseniz, şöyle bir akış takip edin:
-        <ul>
-          <li>Kodunuzu stage' a alın ama commit yapmayın. </li>
-          <li>Yapay zekaya kodunuzu düzelttirin. Kod çalışır hale gelsin.</li>
-          <li>Changes panelinde stage' e alınmamış değişiklikleri gözden geçirin. Yapay zekanın yaptığı değişiklikleri inceleyin. </li>
-          <li>Uygun olduğunu düşünüyosanız yeni geliştirmeleri stage' e alarak commit yapabilirsiniz. Yoksa kendi yazdığınız kodu geri almadan sadece yapay zekanın yaptığı değişiklikleri Discard Changes ile geri alabilirsiniz.</li>
-        </ul>
+        Bu yaklaşım sayesinde yapay zekanın önerilerini güvenli bir şekilde deneyebilir,
+        beğenmediğiniz değişiklikleri kolayca geri alabilirsiniz.
       </p>
     </article>
   );
