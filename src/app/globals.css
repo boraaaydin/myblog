@@ -94,3 +94,8 @@ body {
   background-color: transparent;
   padding: 0;
 }
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
