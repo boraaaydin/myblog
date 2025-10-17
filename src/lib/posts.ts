@@ -2,13 +2,53 @@ import CommitBestPracticesTr from '../components/posts-tr/CommitBestPractices';
 import MCPServersGuideTr from '../components/posts-tr/claude-code-mcp';
 import DevOpsForBeginnersTr from '../components/posts-tr/devops-for-beginners';
 import DockerSwarmDeploymentTr from '../components/posts-tr/docker-swarm-deployment';
+import AdviceForNewDevelopersTr from '../components/posts-tr/advice-for-new-developers';
+import BeginnerGitUsageTr from '../components/posts-tr/beginner-git-usage';
 import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
 import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
 import DevOpsForBeginnersEn from '../components/posts-en/devops-for-beginners';
 import DockerSwarmDeploymentEn from '../components/posts-en/docker-swarm-deployment';
+import AdviceForNewDevelopersEn from '../components/posts-en/advice-for-new-developers';
+import BeginnerGitUsageEn from '../components/posts-en/beginner-git-usage';
 import { BlogPost } from './types';
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: '6',
+    slug: 'beginner-git-usage',
+    date: '2025-10-17',
+    tags: ['GIT', 'BEST_PRACTICES', 'JUNIOR_DEVELOPERS'],
+    readingTime: 5,
+    draft: true,
+    tr: {
+      title: 'Başlangıç Seviyesi Git Kullanımı',
+      excerpt: 'Yeni başlayanlar için Git versiyon kontrol sistemi kullanımı: temel komutlar, workflow ve en iyi uygulamalar.',
+      component: BeginnerGitUsageTr
+    },
+    en: {
+      title: 'Beginner Git Usage',
+      excerpt: 'Git version control system usage for beginners: basic commands, workflow and best practices.',
+      component: BeginnerGitUsageEn
+    }
+  },
+  {
+    id: '5',
+    slug: 'advice-for-new-developers',
+    date: '2025-10-17',
+    tags: ['BEST_PRACTICES', 'DEVELOPMENT', 'JUNIOR_DEVELOPERS'],
+    readingTime: 5,
+    draft: true,
+    tr: {
+      title: 'Yeni Yazılımcılar İçin Tavsiyeler',
+      excerpt: 'Yazılıma yeni başlayanlar için pratik tavsiyeler: çalışma saatleri, öğrenme stratejileri ve başarılı olma yolları.',
+      component: AdviceForNewDevelopersTr
+    },
+    en: {
+      title: 'Advice for New Developers',
+      excerpt: 'Practical advice for those new to software development: working hours, learning strategies and paths to success.',
+      component: AdviceForNewDevelopersEn
+    }
+  },
   {
     id: '4',
     slug: 'docker-swarm-deployment',
