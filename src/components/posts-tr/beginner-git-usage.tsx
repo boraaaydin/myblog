@@ -45,11 +45,11 @@ export default function BeginnerGitUsage() {
         Bir feature geliştirirken başka bir sorun görürseniz, hemen o anda düzeltmeye çalışmayın. Bunun yerine //TODO yorumu ekleyerek daha sonra düzeltmeye çalışın.
       </p>
       <p>
-        Özellikle yapay zekayı kullanırken belirli bir noktaya kadar gelmişseniz ve sonrasında yapay zekaya kodu düzelttirecekseniz, şöyle bir akış takip edin. 
+        Özellikle yapay zekayı kullanırken belirli bir noktaya kadar gelmişseniz ve sonrasında yapay zekaya kodu düzelttirecekseniz, şöyle bir akış takip edin:
         <ul>
-          <li>kodunuzu stage' a alın ama commit yapmayın. </li>
+          <li>Kodunuzu stage' a alın ama commit yapmayın. </li>
           <li>Yapay zekaya kodunuzu düzelttirin. Kod çalışır hale gelsin.</li>
-          <li> Changes panelinde stage' e alınmamış değişiklikleri gözden geçirin. Yapay zekanın yaptığı değişiklikleri inceleyin. </li>
+          <li>Changes panelinde stage' e alınmamış değişiklikleri gözden geçirin. Yapay zekanın yaptığı değişiklikleri inceleyin. </li>
           <li>Uygun olduğunu düşünüyosanız yeni geliştirmeleri stage' e alarak commit yapabilirsiniz. Yoksa kendi yazdığınız kodu geri almadan sadece yapay zekanın yaptığı değişiklikleri Discard Changes ile geri alabilirsiniz.</li>
         </ul>
       </p>

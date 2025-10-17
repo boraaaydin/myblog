@@ -142,4 +142,5 @@ Junior developers may not be familiar with certain technical terms. Create toolt
 
 ### Rules for Creating Blog Pages
 
-- Don' t fill blog page when asked to create one. Add single title and paragraph with Lorem Ipsum.
+- Don't fill blog page when asked to create one. Add single title and paragraph with Lorem Ipsum.
+- Blog posts should NOT include an `<h1>` header tag at the beginning that duplicates the title. The title is already displayed by the page layout.

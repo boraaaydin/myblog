@@ -99,3 +99,22 @@ body {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+.prose ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
