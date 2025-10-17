@@ -3,10 +3,6 @@ import BlogLink from "@/components/BlogLink";
 export default function AdviceForNewDevelopers() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-      <header>
-        <h1>Advice for New Developers</h1>
-      </header>
-
       <p>
         Maximizing your working hours is in your best interest. I can't tell you exactly how many hours to work, but the 10,000-hour rule applies here too. The faster you fill those hours, the faster you'll advance in your career.
       </p>
@@ -62,11 +58,8 @@ export default function AdviceForNewDevelopers() {
           Then review the changes made by the AI in the git changes section, i.e., the unstaged changes, and try to understand which part of the AI's code made it work.
         </p>
         <p>
-          Don't just have the AI write code. Ask questions to understand the code too. Why did we add this code, how would we do it differently if we didn't use this, what would happen if we refactored this code, etc. In other words, use AI not just to reach the result, but also to learn.
+          Don't just have the AI write code. Ask questions to understand the code too: "Why did we add this code?", "How would we do it differently if we didn't use this?", "What would happen if we refactored this code?" etc. In other words, use AI not just to reach the result, but also to learn.
           Make it a habit to always ask a question after having code written. If you can't find a question, ask a silly one.
-        </p>
-        <p>
-
         </p>
       </section>
     </article>
