@@ -88,15 +88,15 @@ export const blogPosts: BlogPost[] = [
     slug: 'mcp-servers-efficient-usage',
     date: '2025-09-23',
     tags: ['AI', 'MCP', 'CLAUDE_CODE', 'DEVELOPMENT', 'BEST_PRACTICES'],
-    readingTime: 7,
+    readingTime: 10,
     tr: {
-      title: 'Yapay Zekayı Verimli Kullanma: MCP Sunucuları',
-      excerpt: 'MCP sunucuları ile yapay zekaya ilave özellikler ekleyebiliyoruz. Claude Code\'un parametrik MCP seçimi ile context window\'u verimli kullanmayı öğrenin.',
+      title: 'Claude Code MCP Sunucuları Rehberi: Context Window ve Performans Optimizasyonu',
+      excerpt: 'Claude Code ile MCP sunucularını kullanmak için kapsamlı rehber. Context window optimizasyonu, AI performansını artırma ve birden fazla MCP yapılandırmasını verimli yönetme yöntemlerini öğrenin.',
       component: MCPServersGuideTr
     },
     en: {
-      title: 'Using AI Efficiently: MCP Servers',
-      excerpt: 'We can add additional features to AI with MCP servers. Learn how to use context window efficiently with Claude Code\'s parametric MCP selection.',
+      title: 'Claude Code MCP Servers Guide: Optimize AI Context Window & Performance',
+      excerpt: 'Complete guide to using MCP servers with Claude Code. Learn how to optimize context window, improve AI performance, and efficiently manage multiple MCP configurations for better development workflow.',
       component: MCPServersGuideEn
     }
   },
