@@ -71,7 +71,7 @@ export default function BeginnerGitUsage() {
       <h2>Geliştirme Sırasında Dikkat Edilmesi Gerekenler</h2>
       <p>
         Bir özellik geliştirirken başka bir sorun görürseniz, hemen o anda düzeltmeye çalışmayın.
-        Bunun yerine <Code>//TODO</Code> yorumu ekleyerek not alın ve sonra düzeltmeye çalışın.
+        Bunun yerine <Code>{"//TODO"}</Code> yorumu ekleyerek not alın ve sonra düzeltmeye çalışın.
         Bu yaklaşım, odaklanmanızı korur ve commit'lerinizi mantıksal olarak ayrı tutar.
       </p>
 

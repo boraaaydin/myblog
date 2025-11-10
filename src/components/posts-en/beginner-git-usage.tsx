@@ -71,7 +71,7 @@ export default function BeginnerGitUsage() {
       <h2>Things to Pay Attention to During Development</h2>
       <p>
         If you see another problem while developing a feature, do not try to fix it immediately.
-        Instead, add a <Code>//TODO</Code> comment to take notes and try to fix it later.
+        Instead, add a <Code>{"//TODO"}</Code> comment to take notes and try to fix it later.
         This approach maintains your focus and keeps your commits logically separate.
       </p>
 
