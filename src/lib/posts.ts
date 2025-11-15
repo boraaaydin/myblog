@@ -4,15 +4,34 @@ import DevOpsForBeginnersTr from '../components/posts-tr/devops-for-beginners';
 import DockerSwarmDeploymentTr from '../components/posts-tr/docker-swarm-deployment';
 import AdviceForNewDevelopersTr from '../components/posts-tr/advice-for-new-developers';
 import BeginnerGitUsageTr from '../components/posts-tr/beginner-git-usage';
+import AICodingBestPracticesTr from '../components/posts-tr/ai-coding-best-practices';
 import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
 import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
 import DevOpsForBeginnersEn from '../components/posts-en/devops-for-beginners';
 import DockerSwarmDeploymentEn from '../components/posts-en/docker-swarm-deployment';
 import AdviceForNewDevelopersEn from '../components/posts-en/advice-for-new-developers';
 import BeginnerGitUsageEn from '../components/posts-en/beginner-git-usage';
+import AICodingBestPracticesEn from '../components/posts-en/ai-coding-best-practices';
 import { BlogPost } from './types';
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: '7',
+    slug: 'ai-coding-best-practices',
+    date: '2025-11-15',
+    tags: ['AI', 'CODING_PRACTICES', 'WORKFLOW', 'BEST_PRACTICES', 'DEVELOPMENT'],
+    readingTime: 8,
+    tr: {
+      title: 'Yapay Zeka ile Kodlama: Vibe Coding, Context Window ve Workflow Stratejileri',
+      excerpt: 'Yapay zeka araçlarını kodlama sürecinde etkili kullanmak için bilmeniz gerekenler: vibe coding yaklaşımı, context window yönetimi ve workflow framework stratejileri.',
+      component: AICodingBestPracticesTr
+    },
+    en: {
+      title: 'AI-Powered Coding: Vibe Coding, Context Window and Workflow Strategies',
+      excerpt: 'What you need to know to effectively use AI tools in the coding process: vibe coding approach, context window management and workflow framework strategies.',
+      component: AICodingBestPracticesEn
+    }
+  },
   {
     id: '6',
     slug: 'beginner-git-usage',

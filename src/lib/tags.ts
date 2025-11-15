@@ -48,6 +48,16 @@ export const TAGS = {
     slug: 'devops',
     tr: 'DevOps',
     en: 'DevOps'
+  },
+  CODING_PRACTICES: {
+    slug: 'coding-practices',
+    tr: 'Kodlama Pratikleri',
+    en: 'Coding Practices'
+  },
+  WORKFLOW: {
+    slug: 'workflow',
+    tr: 'İş Akışı',
+    en: 'Workflow'
   }
 } as const;
 

@@ -170,3 +170,10 @@ Junior developers may not be familiar with certain technical terms. Create toolt
 
 - Don't fill blog page when asked to create one. Add single title and paragraph with Lorem Ipsum.
 - Blog posts should NOT include an `<h1>` header tag at the beginning that duplicates the title. The title is already displayed by the page layout.
+
+### Multi-Language Blog Management
+
+- When editing a blog post in one language (e.g., Turkish), DO NOT automatically edit the corresponding post in the other language (e.g., English)
+- The user will likely make multiple changes to one language version before requesting synchronization
+- Wait for explicit instruction to sync changes to the other language version
+- Example: If editing `src/components/posts-tr/ai-coding-best-practices.tsx`, do not touch `src/components/posts-en/ai-coding-best-practices.tsx` unless explicitly asked
