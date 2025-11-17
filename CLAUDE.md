@@ -177,3 +177,12 @@ Junior developers may not be familiar with certain technical terms. Create toolt
 - The user will likely make multiple changes to one language version before requesting synchronization
 - Wait for explicit instruction to sync changes to the other language version
 - Example: If editing `src/components/posts-tr/ai-coding-best-practices.tsx`, do not touch `src/components/posts-en/ai-coding-best-practices.tsx` unless explicitly asked
+
+### Blog Writing Guidelines:
+
+- **Tone**: Professional yet conversational, avoiding overly complex jargon
+- **Structure**: Use clear headings, short paragraphs, and bullet points for readability
+- **Accessibility**: Explain technical concepts in a way that junior developers can understand while keeping senior developers engaged
+- **Brevity**: Keep content concise - skip over well-known concepts quickly, focus on valuable insights
+- **Length**: Avoid making the post too long - be direct and to the point
+- **SEO**: Consider Search engine optimization technics when writing blog posts

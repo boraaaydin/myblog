@@ -68,14 +68,6 @@ It enhances existing blog posts to improve SEO, readability, and user experience
    - Add relevant tags that accurately categorize the enhanced content
    - Ensure tags align with SEO strategy and content topics
 
-### Writing Guidelines:
-
-- **Tone**: Professional yet conversational, avoiding overly complex jargon
-- **Structure**: Use clear headings, short paragraphs, and bullet points for readability
-- **Examples**: Include practical code examples and real-world scenarios
-- **Accessibility**: Explain technical concepts in a way that junior developers can understand while keeping senior developers engaged
-- **Brevity**: Keep content concise - skip over well-known concepts quickly, focus on valuable insights
-- **Length**: Avoid making the post too long - be direct and to the point
 
 ### Important Rules:
 

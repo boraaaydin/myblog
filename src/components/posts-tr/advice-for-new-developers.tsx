@@ -3,63 +3,117 @@ import BlogLink from "@/components/BlogLink";
 export default function AdviceForNewDevelopers() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-      <p>
-        Çalışma saatini maksimize etmen senin faydana. Şu kadar saat çalış diyemem, ancak 10 bin saat kuralı burada da geçerli. O saati ne kadar hızlı doldurursan, kariyerinde o kadar hızlı ilerlersin.
-      </p>
-      <p>
-        Her gün düzenli olarak çalış, gün aşırı değil. Asıl öğrenme uykuda gerçekleşir. Gün atlarsan, kıymetli olan o uyku saatini de boşa geçirmiş olursun.
-      </p>
-      <p>
-        Pomodoro tekniğini mutlaka dene. Normalde kendini tüketene kadar çalışır, sonra ara verirsin. Pomodoro tekniğini kullanarak yorulmadan ara verdiğin için daha uzun süreler boyunca daha az yorularak çalışabilirsin.
-      </p>
-      <p>
-        Yazılımı severek yapman gerekir. Uzun saatler bilgisayar başında geçirmekten ve problemleri çözmekten keyif alman şart. Eğer çabuk sıkılıyorsan, yazılım muhtemelen sana göre değildir.
-        Belirli teknolojileri öğrenip kendini geliştirmeden de çalışman pekala mümkün, ancak çok parlak bir kariyerin olmayacaktır. Bu yüzden öncelikli olarak işini sevmen ve iş hayatının dışında kendini geliştirmeye vakit ayırman gerekir. Bunun bilincinde ilerle.
-      </p>
-      <p>
-        Hangi programlama dilini öğrendiğinin çoğu zaman bir önemi yok. Her dilin belirli bir potansiyel pazarı var. Ancak yine de çok talep edilen dilleri seçmek mantıklı.
-        <a href="https://survey.stackoverflow.co/">Stack Overflow gibi anketleri</a> inceleyerek hangi dillerin daha çok talep edildiğini görebilirsin.
-      </p>
-      <p>
-        CLI araçlarını kullanmaya çalış. Terminal senin en yakın arkadaşın olacak.
-      </p>
-      <p>
-        Hangi dili öğrenirsen öğren, Git aracını ilk günden temel özellikleriyle kullanmaya başla. <BlogLink href="/blog/beginner-git-usage">Git Aracının Temel Kullanımı</BlogLink> başlıklı blog yazımı okuyabilirsin.
-      </p>
-      <p>
-        Okuduğun okul ve bölüm kariyerinin ilk yıllarında önemli, ancak birkaç işte çalıştıktan sonra önemini kaybediyor. Yazılım ya da bilgisayar mühendisliği okuman şart değil. Okusan da işe girmeni garanti etmiyor.
-        Okumadıysan başta bir dezavantajın var, evet. Biraz özveriyle ilk iş tecrübelerini elde etmeye çalış.
-      </p>
-      <p>
-        Yan proje yap. Seni heyecanlandıran bir konu bul. Çevrende bir ihtiyaç gör ve onunla ilgili bir projeye başla.
-      </p>
-      <p>
-        Bir açık kaynak projesine katkıda bulunmaya çalış. <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a>'de "xyz konusuyla ilgili açık kaynak bir .NET projesi araştır" şeklinde arama yapabilirsin.
-      </p>
-      <p>
-        Evet, İngilizce önemli. Trendi takip etmek ve yeni şeyler öğrenmek için ağırlıklı olarak YouTube'da İngilizce kaynaklar takip ediyorum. Okuduğunu ve dinlediğini anlayacak kadar İngilizce bilmek gerekiyor.
-      </p>
       <section>
-        <h2>Yapay Zekayı Kullanma</h2>
+        <h2>Çalışma Alışkanlıkları</h2>
+
+        <h3>10 Bin Saat Kuralı</h3>
         <p>
-          Teknolojinin kendisini öğrenmen gerektiği kadar, yapay zeka araçlarını kullanmayı öğrenmeye de zaman ayırman gerek. En azından hangi araçların daha çok kullanıldığını düzenli olarak takip etmelisin.
-          Bir araç popüler olduysa bir nedeni vardır. İmkanın varsa kendin de deneyimlemelisin.
+          Çalışma saatini maksimize etmen senin faydana. 10 bin saat kuralı yazılımda da geçerli. O saati ne kadar hızlı doldurursan, kariyerinde o kadar hızlı ilerlersin.
+        </p>
+
+        <h3>Düzenli Çalışma</h3>
+        <p>
+          Her gün düzenli çalış. Asıl öğrenme uykuda gerçekleşir, bu yüzden gün atlama.
+        </p>
+
+        <h3>Pomodoro Tekniği</h3>
+        <p>
+          Kendini tüketene kadar çalışmak yerine Pomodoro tekniğini kullan. Yorulmadan ara verdiğin için daha uzun süreler boyunca daha az yorularak çalışabilirsin.
+        </p>
+      </section>
+
+      <section>
+        <h2>Temel Beceriler</h2>
+
+        <h3>Tutkunu Bul</h3>
+        <p>
+          Yazılımı severek yapman gerekir. Uzun saatler bilgisayar başında geçirmekten ve problem çözmekten keyif almalısın. Çabuk sıkılıyorsan, yazılım sana göre değildir.
         </p>
         <p>
-          Kendini geliştirme sürecinde yapay zekayı belirli limitler içinde kullanmalısın. Yazılımı öğrenmek için kendin düşünerek kod yazman gerekir. Yapay zeka seni tembelleştirebilir. Öğrenmek için otomatik tamamlamayı kapatıp kodunu kendin yazmalısın.
-          Diğer taraftan, yapay zeka iş yapış şekillerini değiştirdi. Yapay zeka araçlarını kullanmadan geliştirme yapanlar uzun vadede geride kalacak. Bu nedenle süreçlerine yapay zekayı dahil etmelisin. Dolayısıyla öğrenme sürecinde bu ikisi arasında belirli bir denge gözetmen gerekir.
+          İşini sevmeden ve kendini geliştirmeye vakit ayırmadan da çalışman mümkün. Ancak parlak bir kariyerin olmayacaktır.
+        </p>
+
+        <h3>Programlama Dili Seçimi</h3>
+        <p>
+          Hangi dili öğrendiğinin çoğu zaman önemi yok. Yine de talep edilen dilleri seç. <a href="https://survey.stackoverflow.co/" target="_blank" rel="noopener noreferrer">Stack Overflow anketleri</a> iyi bir rehber olabilir.
+        </p>
+
+        <h3>Terminal ve Git</h3>
+        <p>
+          CLI araçlarını kullan. Terminal en yakın arkadaşın olacak.
         </p>
         <p>
-          Yapay zekayı tarayıcı üzerinden kullanıyorsan, çok da verimli kullanmıyorsun demektir. Claude Code, Codex CLI, Cursor, Windsurf, Cline, Roocode, Kilocode gibi araçları kullanarak çalışma ortamında yapay zekayı kullanmalısın.
-          Böylece yerel markdown dosyalarını AI memory olarak kullanabilir, ihtiyaç durumunda MCP sunucularını kullanabilir, kullandığın araca göre ek özelliklerden yararlanabilirsin.
+          Git'i ilk günden öğren. <BlogLink href="/blog/beginner-git-usage">Git Aracının Temel Kullanımı</BlogLink> yazımı okuyabilirsin.
+        </p>
+
+        <h3>İngilizce</h3>
+        <p>
+          Trend takibi ve öğrenme için İngilizce şart. Okuduğunu ve dinlediğini anlayacak seviyede olmalısın.
+        </p>
+      </section>
+
+      <section>
+        <h2>Pratik Deneyim</h2>
+
+        <h3>Okul ve Bölüm</h3>
+        <p>
+          İlk yıllarda önemli, sonra önemini kaybediyor. Yazılım mühendisliği okuman şart değil. Özveriyle ilk iş tecrübelerini elde etmeye çalış.
+        </p>
+
+        <h3>Yan Projeler</h3>
+        <p>
+          Seni heyecanlandıran bir konu bul. Çevrende bir ihtiyaç gör ve projeye başla.
+        </p>
+
+        <h3>Açık Kaynak</h3>
+        <p>
+          Bir projeye katkıda bulun. <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a>'de "xyz konusuyla ilgili açık kaynak bir .NET projesi araştır" diye arayabilirsin.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sistem Tasarımı ve Teknoloji Bilgisi</h2>
+        <p>
+          Karşına çıkacak teknolojileri araştır: Redis, RabbitMQ, MongoDB vs. Bunların ne işe yaradığını, hangi problemi çözdüklerini, alternatifleri ne olurdu anla. Yapay zekaya sor, "100 saniyede RabbitMQ" gibi kısa videolar izle.
         </p>
         <p>
-          AI ile birlikte hibrit şekilde nasıl çalışabilirsin? Öncelikle kodu kendin yazmaya çalış. Takıldığın yerde yazdığın kodları Git üzerinde stage'e al, sonra yapay zekaya kodu tamamlat.
-          Ardından Git changes kısmında yapay zekanın yaptığı değişiklikleri, yani stage'e alınmamış değişiklikleri incele ve yapay zekanın yazdığı hangi kısmın kodu çalıştırdığını anlamaya çalış.
+          Bin kişiyle bir milyon kişiye yazdığın uygulama, tasarım olarak farklıdır. Bu teknolojileri bilmen ileride avantaj sağlar. Çok vakit ayır demiyorum, az da olsa ayır.
         </p>
         <p>
-          Yapay zekaya sadece kod yazdırma. Kodu anlamak için de sorular sor: "Bu kodu neden ekledik?", "Bunu kullanmasaydık başka türlü nasıl yapardık?", "Bu kodu refactor edersek nasıl olurdu?" gibi. Yani yapay zekayı sadece sonuca gitmek için değil, öğrenmek için de kullan.
-          Her kod yazdırdıktan sonra mutlaka bir soru sormayı alışkanlık haline getir. Soru bulamazsan bile saçma da olsa soru sor.
+          <a href="https://www.youtube.com/@ByteByteGo/shorts" target="_blank" rel="noopener noreferrer">ByteByteGo</a> kanalının videoları faydalı. Sistem tasarımını ufaktan öğren. <a href="https://roadmap.sh" target="_blank" rel="noopener noreferrer">roadmap.sh</a>'deki roadmap'leri incele.
+        </p>
+      </section>
+
+      <section>
+        <h2>Yapay Zeka Kullanımı</h2>
+
+        <h3>Araçları Takip Et</h3>
+        <p>
+          Hangi AI araçlarının popüler olduğunu takip et. Popülerse bir nedeni vardır, imkanın varsa dene.
+        </p>
+
+        <h3>Öğrenme Sırasında Dikkat</h3>
+        <p>
+          Yazılım öğrenirken kendin düşünerek kod yaz. AI tembelleştirebilir. Otomatik tamamlamayı kapat.
+        </p>
+        <p>
+          Ancak AI iş yapış şekillerini değiştirdi. AI kullanmayanlar geride kalacak. Öğrenme sürecinde denge gözetmen gerekir.
+        </p>
+
+        <h3>Verimli Kullanım</h3>
+        <p>
+          AI'yi tarayıcıdan kullanıyorsan verimli değil. Claude Code, Cursor, Windsurf, Cline gibi araçları çalışma ortamında kullan. Böylece AI memory, MCP sunucuları gibi özelliklerden yararlanabilirsin.
+        </p>
+
+        <h3>Hibrit Çalışma</h3>
+        <p>
+          Önce kendin yaz. Takıldığında kodları Git'te stage'e al, sonra AI'ya tamamlat. Git changes'ta AI'nın değişikliklerini incele, hangi kısmın çalıştığını anla.
+          <BlogLink href="/blog/beginner-git-usage">Git ile ilgil bu blog yazımı</BlogLink> okuyabilirsin.
+        </p>
+
+        <h3>Öğrenmek İçin Kullan</h3>
+        <p>
+          Sadece kod yazdırma. Sorular sor: "Bu kodu neden ekledik?", "Alternatifi neydi?", "Refactor edersek ne olurdu?". Her kod yazdırdıktan sonra soru sor. Soru bulamazsan bile sor.
         </p>
       </section>
     </article>
