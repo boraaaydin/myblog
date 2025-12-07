@@ -22,13 +22,13 @@ export const blogPosts: BlogPost[] = [
     tags: ['AI', 'CODING_PRACTICES', 'WORKFLOW', 'BEST_PRACTICES', 'DEVELOPMENT'],
     readingTime: 8,
     tr: {
-      title: 'Yapay Zeka ile Kodlama: Vibe Coding, Context Window ve Workflow Stratejileri',
-      excerpt: 'Yapay zeka araçlarını kodlama sürecinde etkili kullanmak için bilmeniz gerekenler: vibe coding yaklaşımı, context window yönetimi ve workflow framework stratejileri.',
+      title: 'Yapay Zeka ile Kodlama: Vibe Coding, Context Window ve Spec Driven Development',
+      excerpt: 'Yapay zeka araçlarını kodlama sürecinde etkili kullanmak için bilmeniz gerekenler: vibe coding yaklaşımı, context window yönetimi ve spec driven development.',
       component: AICodingBestPracticesTr
     },
     en: {
-      title: 'AI-Powered Coding: Vibe Coding, Context Window and Workflow Strategies',
-      excerpt: 'What you need to know to effectively use AI tools in the coding process: vibe coding approach, context window management and workflow framework strategies.',
+      title: 'AI-Powered Coding: Vibe Coding, Context Window and Spec Driven Development',
+      excerpt: 'What you need to know to effectively use AI tools in the coding process: vibe coding approach, context window management and spec driven development.',
       component: AICodingBestPracticesEn
     }
   },

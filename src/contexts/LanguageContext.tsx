@@ -21,6 +21,16 @@ function getBrowserLanguage(): Language {
   return 'tr'; // default fallback
 }
 
+function getLanguageFromURL(): Language | null {
+  if (typeof window === 'undefined') return null;
+
+  const pathname = window.location.pathname;
+  if (pathname.startsWith('/tr/')) return 'tr';
+  if (pathname.startsWith('/en/')) return 'en';
+
+  return null;
+}
+
 function getStoredLanguage(): Language {
   if (typeof window === 'undefined') return 'tr';
 
@@ -38,8 +48,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setIsClient(true);
-    const initialLanguage = getStoredLanguage();
+    // Priority: URL language > localStorage > browser language
+    const urlLanguage = getLanguageFromURL();
+    const initialLanguage = urlLanguage || getStoredLanguage();
     setLanguageState(initialLanguage);
+
+    // If URL has a language, update localStorage to keep them in sync
+    if (urlLanguage && urlLanguage !== localStorage.getItem('language')) {
+      localStorage.setItem('language', urlLanguage);
+    }
   }, []);
 
   const setLanguage = (lang: Language) => {

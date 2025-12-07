@@ -1,257 +1,275 @@
 import ToolTip from "@/components/ToolTip";
 import Code from "@/components/Code";
-import Terminal, { TerminalCommand, TerminalResult } from "@/components/Terminal";
+import Terminal, { TerminalCommand, TerminalClaude } from "@/components/Terminal";
 import BlogLink from "../BlogLink";
 
 export default function AICodingBestPractices() {
   return (
     <article className="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
       <p>
-        AI-powered coding tools have become an essential part of modern software development. However, to use these tools effectively, you need to understand the <ToolTip keyName="vibe-coding">vibe coding</ToolTip> approach, <ToolTip keyName="context-window">context window</ToolTip> management, and proper workflow strategies. In this guide, you&apos;ll learn the fundamental principles of working efficiently with <ToolTip keyName="llm">LLM</ToolTip>-based coding assistants.
+        AI-powered coding tools have transformed modern software development. Tools like <ToolTip keyName="claude-code">Claude Code</ToolTip>, GitHub Copilot, and Cursor have multiplied developer productivity. However, to maximize these tools, you must understand the <ToolTip keyName="vibe-coding">vibe coding</ToolTip> approach, <ToolTip keyName="context-window">context window</ToolTip> management, and proper workflow strategies. This guide explains the fundamental principles of working professionally with <ToolTip keyName="llm">LLM</ToolTip>-based coding assistants.
       </p>
 
-      <h2>Context Window: The AI&apos;s Memory Limit</h2>
+      <h2>Context Window: AI&apos;s Short-Term Memory</h2>
       <p>
-        One of the most important limitations you&apos;ll encounter when using AI coding assistants is the <ToolTip keyName="context-window">context window</ToolTip> constraint. So what does this mean?
+        The most critical limitation of AI coding assistants is <ToolTip keyName="context-window">context window</ToolTip> size. Understanding what this means is the first step to efficient work.
       </p>
       <p>
-        <ToolTip keyName="llm">LLM</ToolTip> models work in a <ToolTip keyName="stateless">stateless</ToolTip> manner—meaning they don&apos;t actually remember you. With each new query, your entire conversation history is resent to the AI server and processed. This makes the AI appear to &quot;know&quot; the context of the conversation. However, this system has a cost: memory limitation.
+        <ToolTip keyName="llm">LLM</ToolTip> models work in a <ToolTip keyName="stateless">stateless</ToolTip> manner—they don&apos;t remember you. With each new query, the entire conversation history is resent to the AI server. The context window includes not just messages, but all operation data like file reads, terminal outputs, lint results, and web searches. This makes the AI appear to &quot;remember&quot; conversation context—but it&apos;s an illusion.
       </p>
       <p>
-        When the context window fills up, the AI:
+        Performance drops as the context window approaches fullness. Proactive management is essential before it fills up.
       </p>
+
+      <h3>What Happens When Context Window Fills?</h3>
       <ul>
-        <li>Starts to &quot;forget&quot; information from the beginning of the conversation</li>
-        <li>Becomes prone to <ToolTip keyName="hallucination">hallucination</ToolTip></li>
-        <li>May provide inconsistent responses</li>
-        <li>May ignore previous instructions</li>
+        <li>Information from the beginning of the conversation gets lost</li>
+        <li><ToolTip keyName="hallucination">Hallucination</ToolTip> rate increases</li>
+        <li>Inconsistent and erroneous responses are given</li>
+        <li>Previous instructions are ignored</li>
+        <li>Code quality decreases</li>
       </ul>
 
-      <h2>Why Is It Hard to Build an Application with a Single Prompt?</h2>
+      <h2>Why Can&apos;t You Write the Entire App with One Prompt?</h2>
       <p>
-        Many developers try to write one very detailed, long <ToolTip keyName="prompt">prompt</ToolTip> to the AI and have it build the entire application. However, this approach has a low success rate. Here&apos;s why:
+        A common mistake: writing a very detailed, long <ToolTip keyName="prompt">prompt</ToolTip> to the AI and asking it to create the entire application in one go. This approach almost always fails.
       </p>
 
-      <h3>1. Context Window Limitation</h3>
+      <h3>1. Context Window Limit</h3>
       <p>
-        No matter how detailed it is, building a complex application with a single prompt is difficult. As the project grows and the conversation lengthens, the context window starts to fill up and quality degrades.
+        While not impossible, writing a complex application in a single prompt is highly inefficient. As the project grows, context fills up, performance drops, errors increase.
       </p>
 
-      <h3>2. Error Accumulation</h3>
+      <h3>2. Error Cumulative Effect</h3>
       <p>
-        Small mistakes made in a single long session accumulate and turn into bigger problems in subsequent steps. Detecting and fixing these errors becomes increasingly difficult.
+        Small mistakes made in long sessions cause chain reactions. A 5-line error at step one can turn into a 500-line rewrite at step 50.
       </p>
 
-      <h3>3. Context Loss</h3>
+      <h3>3. Context Erosion</h3>
       <p>
-        In long conversations, the AI may &quot;forget&quot; your project&apos;s initial requirements or constraints and produce inconsistent code.
+        In long conversations, AI &quot;forgets&quot; the project&apos;s initial requirements. You request Next.js at the start, 50 messages later it&apos;s writing a React app.
       </p>
 
-      <h2>Solution: Divide and Conquer Strategy</h2>
+      <h2>Solution: Task-Based Workflow Approach</h2>
       <p>
-        The most effective method for successful <ToolTip keyName="vibe-coding">vibe coding</ToolTip> is to break your project into logical parts and focus on one task at a time. Here&apos;s the step-by-step approach:
+        The secret to successful <ToolTip keyName="vibe-coding">vibe coding</ToolTip>: divide project into logical tasks, focus on each task, keep context clean.
       </p>
 
-      <h3>1. Break the Main Task into Subtasks</h3>
+      <h3>1. Break Large Tasks into Atomic Parts</h3>
       <p>
-        Divide a large feature into small, manageable parts. For example, a user authentication system can be broken down into these subtasks:
-      </p>
-      <ul>
-        <li>Create user data model</li>
-        <li>Write registration API endpoint</li>
-        <li>Write login API endpoint</li>
-        <li>Add token management</li>
-        <li>Create frontend forms</li>
-        <li>Implement error handling</li>
-      </ul>
-
-      <h3>2. Start a New Context for Each Task</h3>
-      <p>
-        After completing each subtask, start a new conversation. The advantages of this approach:
+        Each task should focus on a single responsibility. Example: User authentication system
       </p>
       <ul>
-        <li>You start with a clean, empty context window</li>
-        <li>AI focuses only on relevant information</li>
-        <li>Error accumulation is prevented</li>
-        <li>You get the best performance for each task</li>
+        <li><strong>Task 1:</strong> User model and database schema</li>
+        <li><strong>Task 2:</strong> POST /api/register endpoint (validation + bcrypt)</li>
+        <li><strong>Task 3:</strong> POST /api/login endpoint (JWT token)</li>
+        <li><strong>Task 4:</strong> Token refresh mechanism</li>
+        <li><strong>Task 5:</strong> Frontend register/login forms</li>
+        <li><strong>Task 6:</strong> Error handling and security headers</li>
       </ul>
 
-      <h3>3. Context Transfer Between Tasks</h3>
+      <h3>2. Each Task = New Context Window</h3>
       <p>
-        For each new task, provide the AI with:
+        When a task is complete, start a new conversation. Advantages:
       </p>
       <ul>
-        <li>The main project&apos;s purpose</li>
-        <li>What was done in previous tasks</li>
-        <li>How this task relates to the main goal</li>
-        <li>Technology and architectural decisions to be used</li>
+        <li>Clean, optimized context</li>
+        <li>Only relevant information (previous task results)</li>
+        <li>Zero risk of error chaining</li>
+        <li>Maximum AI performance</li>
       </ul>
 
-      <h2>Efficiency with Workflow Framework</h2>
+      <h3>3. Transfer Context for Each New Task</h3>
       <p>
-        Modern AI coding tools support <ToolTip keyName="workflow">workflow</ToolTip>-based work. This approach works as follows:
+        In the new conversation, specify:
+      </p>
+      <ul>
+        <li><strong>Project summary:</strong> &quot;E-commerce site with Next.js 14&quot;</li>
+        <li><strong>Completed tasks:</strong> &quot;User model and register endpoint ready&quot;</li>
+        <li><strong>Current task:</strong> &quot;We&apos;ll add login endpoint&quot;</li>
+        <li><strong>Technology stack:</strong> &quot;TypeScript, Prisma, JWT, bcrypt&quot;</li>
+      </ul>
+
+      <h3>Spec Driven Development: More Structured Approach</h3>
+      <p>
+        Some developers prefer a method similar to test-driven development (TDD): <strong>Spec Driven Development</strong>. Write an executable specification first, then have the AI write code that adheres to this spec.
+      </p>
+      <p>
+        Popular tools:
+      </p>
+      <ul>
+        <li><a href="https://github.com/buildermethods/agent-os" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Agent OS</a> - Spec-driven AI agent operating system</li>
+        <li><a href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">BMAD</a> - 19+ agents, 50+ <ToolTip keyName="workflow">workflows</ToolTip></li>
+        <li><a href="https://github.com/github/spec-kit" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Spec Kit</a> - GitHub&apos;s specification tool</li>
+        <li><a href="https://github.com/Fission-AI/OpenSpec" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Open Spec</a> - Open source spec management</li>
+      </ul>
+      <p>
+        <strong>Warning:</strong> May be over-engineering for small projects. A simple task list is often sufficient.
       </p>
 
-      <h3>Task File Approach</h3>
+      <h2>Context Window Optimization Strategies</h2>
       <p>
-        Work by creating separate task files within the same repository:
+        Think of context as a CPU—a limited resource. Use it efficiently with these strategies:
       </p>
 
-      <Terminal title="Project Structure">
-        <TerminalCommand>ls tasks/</TerminalCommand>
-        <TerminalResult>01-create-user-model.md</TerminalResult>
-        <TerminalResult>02-setup-authentication.md</TerminalResult>
-        <TerminalResult>03-build-api-endpoints.md</TerminalResult>
-        <TerminalResult>04-create-frontend-forms.md</TerminalResult>
+      <h3>1. Maximum Results with Minimal Messages</h3>
+      <p>
+        Each <ToolTip keyName="prompt">prompt</ToolTip> and response fills the context. Use 1 well-written prompt instead of a 10-message conversation.
+      </p>
+      <p>
+        <strong>Bad approach:</strong>
+      </p>
+      <ul>
+        <li>&quot;Make API&quot;</li>
+        <li>&quot;Add user&quot;</li>
+        <li>&quot;Add password&quot;</li>
+        <li>&quot;Add validation&quot;</li>
+      </ul>
+      <p>
+        <strong>Good approach:</strong>
+      </p>
+      <p>
+        &quot;Write Express.js POST /api/register endpoint. Validate email/password, hash with bcrypt, return JWT token, save to PostgreSQL with Prisma.&quot;
+      </p>
+
+      <h3>2. Context Refresh Commands</h3>
+      <p>
+        When context fills up or performance drops:
+      </p>
+      <Terminal title="Context Management">
+        <TerminalClaude>/clear</TerminalClaude>
+        <TerminalClaude>/compact Project uses Next.js 14, TypeScript, Prisma</TerminalClaude>
+      </Terminal>
+      <ul>
+        <li><Code>/clear</Code> - Start completely new conversation</li>
+        <li><Code>/compact</Code> - Get conversation summary, start new session</li>
+        <li>Re-specify important info (stack, architectural decisions) in new session</li>
+      </ul>
+
+      <h3>3. Monitor Context Usage</h3>
+      <p>
+        AI tools display context fill rate. Track proactively for management:
+      </p>
+      <Terminal title="Context Monitoring">
+        <TerminalClaude>/context</TerminalClaude>
+      </Terminal>
+      <ul>
+        <li><ToolTip keyName="claude-code">Claude Code</ToolTip>: <Code>/context</Code> command</li>
+        <li>Gemini CLI: <Code>/memory</Code> command</li>
+        <li>Consider new conversation at 70-80% fullness</li>
+        <li>Reset more frequently for critical tasks</li>
+      </ul>
+
+      <h3>4. Use MCP Servers Wisely</h3>
+      <p>
+        <ToolTip keyName="mcp">MCP</ToolTip> servers give AI superpowers but also consume context. When each MCP server starts, schema information loads into context and stays there permanently.
+      </p>
+      <p>
+        <strong>Efficient MCP usage:</strong>
+      </p>
+      <ul>
+        <li>Only load MCPs you use</li>
+        <li>Disable unused servers</li>
+        <li>Use different MCP configs per project</li>
+        <li>Prefer lazy loading (load on demand)</li>
+      </ul>
+      <p>
+        <strong>Detailed info:</strong> <BlogLink href="/blog/mcp-servers-efficient-usage">Efficient MCP Server Usage Guide</BlogLink>
+      </p>
+
+      <h2>5 Golden Rules for Vibe Coding Success</h2>
+
+      <h3>1. Manage Context Like RAM</h3>
+      <p>
+        Context is a limited resource. Every file read, web search, terminal output consumes context. Don&apos;t load unnecessary info.
+      </p>
+
+      <h3>2. Single Responsibility: One Task One Job</h3>
+      <p>
+        ❌ &quot;Build user system and payment integration&quot;
+        <br />
+        ✅ Task 1: &quot;User system&quot;, Task 2: &quot;Payment integration&quot;
+      </p>
+
+      <h3>3. Test Before Moving Forward</h3>
+      <p>
+        Test after each task completes. AI code isn&apos;t 100% correct. Run build, lint, unit tests.
+      </p>
+      <Terminal title="After Each Task">
+        <TerminalCommand>npm run build</TerminalCommand>
+        <TerminalCommand>npm run lint</TerminalCommand>
+        <TerminalCommand>npm test</TerminalCommand>
       </Terminal>
 
+      <h3>4. Prompt Engineering: Few Words, Much Info</h3>
       <p>
-        Each task file should contain:
+        Write clear, specific, contextual <ToolTip keyName="prompt">prompts</ToolTip>:
       </p>
       <ul>
-        <li><strong>Task definition</strong>: What needs to be done?</li>
-        <li><strong>Context</strong>: What is the main project goal?</li>
-        <li><strong>Acceptance criteria</strong>: When is the task considered complete?</li>
-        <li><strong>Checkpoints</strong>: What needs to be tested?</li>
+        <li>❌ &quot;Make an API&quot;</li>
+        <li>✅ &quot;Express.js, user registration, POST /api/register, email+password validation, bcrypt hash, return JWT token, Prisma PostgreSQL&quot;</li>
       </ul>
 
-      <h3>Advanced Workflow Frameworks</h3>
+      <h3>5. One Commit Per Task</h3>
       <p>
-        Some developers prefer more structured approaches. <a href="https://github.com/github/spec-kit" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Spec-Kit</a> is a toolset that encourages creating executable specifications before writing code. <a href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">BMAD-METHOD</a> is a comprehensive framework with 19+ specialized agents and 50+ <ToolTip keyName="workflow">workflows</ToolTip>. Such tools are powerful but may be over-engineering for some projects—simple task management may be sufficient based on your own needs.
+        Task completed → <ToolTip keyName="git-commit">commit</ToolTip>. Small commits = easy rollback, clear history.
+      </p>
+      <Terminal title="Git Workflow">
+        <TerminalCommand>git add .</TerminalCommand>
+        <TerminalCommand>git commit -m &quot;feat: add user registration endpoint&quot;</TerminalCommand>
+      </Terminal>
+      <p>
+        Detailed info: <BlogLink href="/blog/big-gains-with-small-commits">Big Gains with Small Commits</BlogLink>
       </p>
 
-      <h2>Let AI Add Checkpoints</h2>
+      <h2>3 Critical Mistakes and Solutions</h2>
+
+      <h3>❌ Mistake 1: Marathon Conversation</h3>
       <p>
-        When creating tasks, you can ask the AI to perform checks at each stage. An example <ToolTip keyName="prompt">prompt</ToolTip> structure:
+        <strong>Problem:</strong> Writing the entire project in a 100+ message conversation
+      </p>
+      <p>
+        <strong>Solution:</strong> Refresh every 50-100 messages. Start new conversation per feature.
       </p>
 
-      <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg my-4">
-        <p className="font-mono text-sm">
-          &quot;After completing this task:
-          <br />1. Run unit tests
-          <br />2. Check if build is successful
-          <br />3. Look for linting errors
-          <br />4. If you made frontend changes, let me know if visual inspection is possible in the browser
-          <br />5. If all checks pass, give me a summary and let&apos;s move on to the next task&quot;
-        </p>
-      </div>
-
-      <h2>Tips for Context Window Management</h2>
+      <h3>❌ Mistake 2: Context-Free Start</h3>
       <p>
-        To optimize <ToolTip keyName="context-window">context window</ToolTip> management:
+        <strong>Problem:</strong> Saying &quot;Make login endpoint&quot; in new conversation (How would AI know?)
+      </p>
+      <p>
+        <strong>Solution:</strong> Give mini brief in each new session: &quot;Next.js 14, TypeScript, Prisma, PostgreSQL. User model ready. Now adding login endpoint.&quot;
       </p>
 
-      <h3>1. Don&apos;t Share Unnecessary Information</h3>
+      <h3>❌ Mistake 3: Test-Free Coding</h3>
       <p>
-        For each task, share only relevant files and information. Showing the entire codebase every time unnecessarily fills the context.
+        <strong>Problem:</strong> AI wrote code, continuing without testing
+      </p>
+      <p>
+        <strong>Solution:</strong> Don&apos;t move to new task without running build + lint + test. Errors not caught early become cascading disasters.
       </p>
 
-      <h3>2. Use Summary Information</h3>
+      <h2>Conclusion: AI is a Tool, Not a Magic Wand</h2>
       <p>
-        When referring to previous tasks, use summaries instead of detailed code:
+        AI coding assistants have democratized software development. But strategy is essential for maximum efficiency:
       </p>
       <ul>
-        <li>Good: &quot;User model was created with <Code>email</Code>, <Code>password</Code>, <Code>createdAt</Code> fields&quot;</li>
-        <li>Bad: [Pasting the entire model code]</li>
+        <li><strong>Manage context window wisely</strong> - It&apos;s a limited resource</li>
+        <li><strong>Break tasks into atomic parts</strong> - Each task = 1 responsibility</li>
+        <li><strong>Test, commit, refresh</strong> - Prevent error accumulation</li>
+        <li><strong>Learn prompt engineering</strong> - Few messages, much info</li>
+        <li><strong>Optimize MCPs</strong> - Don&apos;t load unnecessary servers</li>
       </ul>
-
-      <h3>3. Track Your Context Window Usage</h3>
       <p>
-        Modern AI coding tools allow you to view your context window usage. This way you can see how much capacity remains and adjust your strategy accordingly:
+        <strong>Golden rule:</strong> AI + Good software engineering practices = 10x productivity. AI alone isn&apos;t enough—you must think strategically.
+      </p>
+      <p>
+        <strong>More resources:</strong>
       </p>
       <ul>
-        <li>In <ToolTip keyName="claude-code">Claude Code</ToolTip>: You can view your current context usage with the <Code>/context</Code> command</li>
-        <li>In Gemini CLI: You can check context status with the <Code>/memory</Code> command</li>
-        <li>Consider starting a new conversation when the context window is getting full</li>
-        <li>Reset context more frequently for critical tasks to start fresh</li>
+        <li><BlogLink href="/blog/mcp-servers-efficient-usage">Efficient MCP Server Usage</BlogLink></li>
+        <li><BlogLink href="/blog/big-gains-with-small-commits">Big Gains with Small Commits</BlogLink></li>
+        <li><BlogLink href="/blog/beginner-git-usage">Beginner-Level Git Usage</BlogLink></li>
       </ul>
-
-      <h3>4. Optimize MCP Usage</h3>
-      <p>
-        <ToolTip keyName="mcp">MCP</ToolTip> (Model Context Protocol) servers provide powerful capabilities to your AI tools but also consume your context window. When each MCP server starts, schema information is loaded into the context and this space is constantly occupied.
-      </p>
-      <p>
-        To use your context window efficiently:
-      </p>
-      <ul>
-        <li>Load MCP servers only when you need them</li>
-        <li>Disable MCP servers you&apos;re not using</li>
-        <li>If you have multiple projects, use different MCP configurations for each project</li>
-        <li>Load MCP servers with lazy loading (on demand)</li>
-      </ul>
-      <p>
-        For detailed information on efficient MCP server usage, you can read my article <BlogLink href="/blog/mcp-servers-efficient-usage">Efficient MCP Server Usage</BlogLink>.
-      </p>
-
-      <h2>Keys to Success in Vibe Coding</h2>
-      <p>
-        To work efficiently with <ToolTip keyName="vibe-coding">vibe coding</ToolTip>:
-      </p>
-
-      <h3>1. Manage Context Window as a Resource</h3>
-      <p>
-        Context space is a limited resource. Evaluate whether each piece of information is truly necessary.
-      </p>
-
-      <h3>2. Keep Tasks Atomic</h3>
-      <p>
-        Each task should focus on a single responsibility. Instead of &quot;user system and payment integration,&quot; make these two separate tasks.
-      </p>
-
-      <h3>3. Don&apos;t Skip Testing and Validation</h3>
-      <p>
-        Run tests at the end of each task. AI-generated code may not always be correct.
-      </p>
-
-      <h3>4. Develop Good Prompt Writing Skills</h3>
-      <p>
-        Write clear, specific, and contextual <ToolTip keyName="prompt">prompts</ToolTip>:
-      </p>
-      <ul>
-        <li>Bad: &quot;Make an API&quot;</li>
-        <li>Good: &quot;Using Express.js, create a POST /api/register endpoint for user registration. Validate email and password. Hash password with bcrypt. Return JWT token.&quot;</li>
-      </ul>
-
-      <h3>5. Use Version Control</h3>
-      <p>
-        <ToolTip keyName="git-commit">Commit</ToolTip> after completing each task. This way:
-      </p>
-      <ul>
-        <li>You can revert incorrect changes</li>
-        <li>You can track progress</li>
-        <li>You can perform code reviews</li>
-      </ul>
-
-      <h2>Common Mistakes and How to Prevent Them</h2>
-
-      <h3>Mistake 1: Too Long Conversations</h3>
-      <p>
-        <strong>Problem:</strong> Trying to add too many features within a single conversation.
-        <br />
-        <strong>Solution:</strong> Start a new conversation after 50-100 messages or refresh at important milestones.
-      </p>
-
-      <h3>Mistake 2: Lack of Context</h3>
-      <p>
-        <strong>Problem:</strong> Not telling the AI the general purpose of the project when starting a new task.
-        <br />
-        <strong>Solution:</strong> Start each new conversation with a 2-3 sentence project summary.
-      </p>
-
-      <h3>Mistake 3: Uncontrolled Progress</h3>
-      <p>
-        <strong>Problem:</strong> Moving to the next task without testing.
-        <br />
-        <strong>Solution:</strong> Run at least the build and basic tests at the end of each task.
-      </p>
-
-      <h2>Conclusion: Think Strategically, Code Efficiently</h2>
-      <p>
-        AI-powered coding tools are powerful, but effective use requires strategy. <ToolTip keyName="context-window">Context window</ToolTip> management, proper task division, and systematic checks form the foundation of successful <ToolTip keyName="vibe-coding">vibe coding</ToolTip>.
-      </p>
-      <p>
-        Remember: AI is a tool, not a magic wand. The best results emerge when you combine AI&apos;s power with good software engineering practices.
-      </p>
     </article>
   );
 }
