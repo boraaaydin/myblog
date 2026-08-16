@@ -1,0 +1,24 @@
+Girişimcilikten yazılımcılığa geçtim sayılır mı:)
+
+45 yaşındayım. Lisansım makina mühendisliği. 10 sene mesleğimi yaptım. Sonra bir girişim fikrimi uygulamaya dökmek için internetten bir yazılımcı bulup uygulama yaptırmaya çalıştım. İstediğim gibi sonuçlanmayınca projeyi rafa kaldırdım. Girişimciliği araştırdım, girişimci insanların videolarını izledim. Ufak deneme ve yanılmalar sonrasında yazılımla amatör olarak ilgilenmeye başladım. Sonra mesleğim oldu. En son bankada yazılımcı olarak çalıştım. Şuan kendi girişimim var.
+
+Girişimciliği kısa vadede görmedim, çok hırslı olup bunu sonuna kadar deneyeceğim demedim. Param bitince çalışma hayatına döndüm. Hayatımın çoğunda bir yerde çalıştım. En başarılı girişimcilerin ortalama yaşı 45 miş. Yani bence girişimcilik 100 metre koşusu değil, bir maraton.
+
+Mühendislikten gelmem ya da kişiliğimden kaynaklı olabilir, sistematik oldum her zaman. Fikirlerim kötü olsa da hepsini tarihleriyle not ettim. Her fikrin kabaca SWOT analizini yaptım, akışı yazdım. Zaman geçtikten sonra döndüm ilaveler yaptım. İzlediğim youtube videolarında o sorunla karşılaşan birini gördüğümde dakikasıyla birlikte not ettim. Faydalı olabileceğini ve ileride kullanabileceğimi düşündüğüm siteleri etiketleyerek raindrop gibi uygulamalarla bookmarkladım. Yani girişimcilik sistematik olmaktır
+
+Yapay zekanın bu kadar gelişmiş olduğu bir dönemde yapılabilecek en iyi şey girişimci yazılımcı olmaktır. Yapay zekayı kimin nasıl kullandığını anlamak için zaman harcadım. Videolar izledim. Ormana girmeden önce baltayı sivriltmek için zaman harcamanın daha iyi bir strateji olduğunu inandım her zaman. Git worktree gibi yaklaşımlarla paralel işleri nasıl yaptıklarını inceledim. Onların her yaptıklarını almadım ama kendime göre bir akış oluşturup daha kısa zamanda daha çok iş çıkarmak için kendime göre promptlar hazırladım. Girişimcilik devamlı kendini geliştirmektir, sorgulamaktır.
+
+Domain konusunda bilgi sahibi olmak önemli. Her sorunu birinci elden yaşayıp / yaşayanları görüp hem de fikri hayata geçiren olmak çok değerli. O zaman girişimin başarı şansı artar. Denk geldiğimde farklı alanlarla ilgili kişilerle onların işleri hakkında konuşmaya, onların yaşadıklarını anlamaya çalışırım. Girişimcilik iyi bir gözlemci olmaktır.
+
+Girişimcilik nedir diye sormadın ama bence girişimcilikte başarılı olmak için girişimciliğin ne olduğunu bilmek gerekiyor. Bunları düşünerek kendine uzun vadeli, üzerine devamlı kattığın bir yol çizebilirsin.
+
+Daha çok gençsin, kısa vadede hedefin para kazanmak ise üzülebilirsin. Öncelikli hedefin insanların kullandığı bir ürün oluşturmak olmalı bence. Bunu ücretsiz de verebilirsin başta. Sunucu ve domain ücretini alırsın mesela başta sadece. Uygulama kullanıldıkça ekstra ihtiyaçlar olacaktır. Onlardan ufak da olsa ücret almaya çalışırsın. Öncelikle amacın sana ufak da olsa ödeme yapmalarını sağlamak olacak ama bu para seni geçindiremeyecek. O yüzden girişimciliği asıl işinin yanında yapman lazım. Çünkü çok gençsin, çevren az, yazılım, devops bilgin kısıtlı, bi çok alanda pişmen lazım.
+
+Parası olan ve teknolojiyi kullanan insanların ihtiyaçlarını araştır. Türkiye de değil de Amerika’daki bir insanı düşün. Girişimcilikte persona diye bir konsept vardır, personalar oluştur kafanda ve o insanın ne ihtiyacı olabileceğini bulmaya çalış. Çevrende varsa öyle biri gerçek bir insanı da düşünebilirsin ama bikaç personan olsun. Çok az insanın ihtiyacı olan bişey yapabilirsin. Örneğin lüks Motorsiklet markalarının aksesuarlarının listelendiği bir site olabilir. Fikrin küçük versiyonunu Türkiye de düşün, lüks motor mağazalarına git, mağaza sahibiyle konuş vs. Motorsikleti örnek olarak verdim. Kendi hobin varsa onun çevresinde bir uygulama olabilir. Reddit gibi forumları ihtiyaçları anlayabilmek için kullanabilirsin. Çok araştır, fikirler türet ve not al. Bikaç fikir bulduktan sonra karşılaştırıp en az eforla para kazandıran fikri bulmaya çalış ve başla. Fikrin değeri 1 ile -1 tl arasında değişir. İlerledikçe çarpanlar eklersin. Kötü fikir eksiye doğru gideceği için doğru fikri bulmaya çok zaman harca.
+
+
+Bak örneğin güzel bir örneğe denk geldim.
+
+https://www.youtube.com/watch?v=2c-ANeLEhno
+
+İlker Canikligil kendi ihtiyacını yapabilecek kapasitede olduğu için güzel bir uygulama yapmış. Ama çoğu insan bunu yapamayacak. İlker Canikligil gibi insanları bulup o ihtiyaçları ağızlarından alman gerekiyor. Domain bilgisine hakim olman da bu açıdan önemli aslında. Yani o kişiyle konuşurken şunu sorabilirsin yönlendirmeden. "Konuşanlar aralarda boşluklar verebiliyor, eee diye duraksıyorlar. Bu tür şeyler sizin için nasıl problemlere neden oluyor ve bunu çözmek için neler yapıyorsunuz?" Evet hayır sorusu sormadan karşındaki kişiyi konuşturacak sorular sorman gerekiyor. Etrafta çok fikir olsa da ve fikirlerin kendileri çok değerli olmasa da doğru fikre yatırım yapmak ve bulmak için zaman harcamak gerekiyor.

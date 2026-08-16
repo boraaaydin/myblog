@@ -58,6 +58,16 @@ export const TAGS = {
     slug: 'workflow',
     tr: 'İş Akışı',
     en: 'Workflow'
+  },
+  ENTREPRENEURSHIP: {
+    slug: 'entrepreneurship',
+    tr: 'Girişimcilik',
+    en: 'Entrepreneurship'
+  },
+  STARTUP: {
+    slug: 'startup',
+    tr: 'Startup',
+    en: 'Startup'
   }
 } as const;
 

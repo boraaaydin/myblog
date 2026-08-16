@@ -173,10 +173,10 @@ Junior developers may not be familiar with certain technical terms. Create toolt
 
 ### Multi-Language Blog Management
 
-- When editing a blog post in one language (e.g., Turkish), DO NOT automatically edit the corresponding post in the other language (e.g., English)
-- The user will likely make multiple changes to one language version before requesting synchronization
-- Wait for explicit instruction to sync changes to the other language version
-- Example: If editing `src/components/posts-tr/ai-coding-best-practices.tsx`, do not touch `src/components/posts-en/ai-coding-best-practices.tsx` unless explicitly asked
+- When editing a blog post in one language, ALWAYS apply the same change to every other language version of that post
+- Example: If editing `src/components/posts-tr/ai-coding-best-practices.tsx`, apply the equivalent change to `src/components/posts-en/ai-coding-best-practices.tsx` in the same step
+- Translate the change idiomatically for the target language instead of copying the wording literally
+- All language versions of a post must stay in sync in content, structure and section order
 
 ### Blog Writing Guidelines:
 

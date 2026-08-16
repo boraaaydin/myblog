@@ -5,6 +5,7 @@ import DockerSwarmDeploymentTr from '../components/posts-tr/docker-swarm-deploym
 import AdviceForNewDevelopersTr from '../components/posts-tr/advice-for-new-developers';
 import BeginnerGitUsageTr from '../components/posts-tr/beginner-git-usage';
 import AICodingBestPracticesTr from '../components/posts-tr/ai-coding-best-practices';
+import AdviceForEntrepreneursTr from '../components/posts-tr/advice-for-entrepreneurs';
 import CommitBestPracticesEn from '../components/posts-en/CommitBestPractices';
 import MCPServersGuideEn from '../components/posts-en/claude-code-mcp';
 import DevOpsForBeginnersEn from '../components/posts-en/devops-for-beginners';
@@ -12,9 +13,28 @@ import DockerSwarmDeploymentEn from '../components/posts-en/docker-swarm-deploym
 import AdviceForNewDevelopersEn from '../components/posts-en/advice-for-new-developers';
 import BeginnerGitUsageEn from '../components/posts-en/beginner-git-usage';
 import AICodingBestPracticesEn from '../components/posts-en/ai-coding-best-practices';
+import AdviceForEntrepreneursEn from '../components/posts-en/advice-for-entrepreneurs';
 import { BlogPost } from './types';
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: '8',
+    slug: 'advice-for-entrepreneurs',
+    date: '2026-08-16',
+    tags: ['ENTREPRENEURSHIP', 'STARTUP', 'BEST_PRACTICES'],
+    readingTime: 5,
+    draft: true,
+    tr: {
+      title: 'Girişimcilere Tavsiyeler: Girişimci Yazılımcı Olmak İçin Pratik Öneriler',
+      excerpt: 'Girişimciliğe başlayacaklara madde madde tavsiyeler: uzun vadeli düşünmek, sistematik çalışmak, doğru fikri bulmak ve doğru soruları sormak.',
+      component: AdviceForEntrepreneursTr
+    },
+    en: {
+      title: 'Advice for Entrepreneurs: Practical Tips for Becoming a Founder-Developer',
+      excerpt: 'Point-by-point advice for those starting out in entrepreneurship: thinking long term, working systematically, finding the right idea and asking the right questions.',
+      component: AdviceForEntrepreneursEn
+    }
+  },
   {
     id: '7',
     slug: 'ai-coding-best-practices',

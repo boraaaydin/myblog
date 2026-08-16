@@ -23,3 +23,8 @@ This command accepts a blog topic as a parameter.
    - Set `draft: true` in the post entry
    - Import both Turkish and English components
    - Include: id, slug, date (today), tags, readingTime, tr/en titles and excerpts
+
+### Blog yazısı hazırlarken dikkat edilecek konular
+
+- **Ülke ismi kullanma**: Belirli bir ülke adı (Türkiye, Amerika vb.) yerine ülkeden bağımsız ifadeler kullan. "Kendi ülkende", "yaşadığın yerde" gibi. Hedef kitle global olduğu için okuyucu nerede yaşıyorsa oraya uyan bir dil kullan.
+- **Sohbet dilini olduğu gibi aktarma**: Kullanıcının chat ortamında biriyle konuşurken yazdığı cümleler ("Güzel bir örneğe denk geldim", "Bak örneğin" vb.) blog yazısına birebir taşınmamalı. İçeriği koru ama blog diline uygun şekilde yeniden yaz.

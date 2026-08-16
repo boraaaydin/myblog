@@ -75,6 +75,22 @@ export const tooltipContent: Record<string, Record<string, string>> = {
     tr: `Workflow (iş akışı), bir görevi tamamlamak için izlenen adımlar dizisidir. Yazılım geliştirmede workflow, planlama, kodlama, test, review ve deployment aşamalarını içerir. AI kodlamada workflow, görevleri küçük parçalara bölme, her birini ayrı context'te çalıştırma ve sonuçları kontrol etme sürecidir. Task-based workflow, vibe coding'de başarının anahtarıdır. Agile, Scrum ve Kanban gibi metodolojiler farklı workflow yaklaşımlarıdır.`,
     en: `Workflow is a series of steps followed to complete a task. In software development, workflow includes planning, coding, testing, review, and deployment stages. In AI coding, workflow is the process of breaking tasks into small pieces, running each in a separate context, and checking results. Task-based workflow is key to success in vibe coding. Methodologies like Agile, Scrum, and Kanban are different workflow approaches.`,
   },
+  "swot-analysis": {
+    tr: `SWOT analizi, bir fikri veya projeyi dört başlık altında değerlendiren basit bir yöntemdir: Strengths (güçlü yönler), Weaknesses (zayıf yönler), Opportunities (fırsatlar) ve Threats (tehditler). Bir girişim fikrini not ederken kabaca SWOT analizini yapmak, fikrin gerçekten ne kadar sağlam olduğunu görmenizi ve zaman içinde üzerine ekleme yapmanızı kolaylaştırır.`,
+    en: `SWOT analysis is a simple method for evaluating an idea or project under four headings: Strengths, Weaknesses, Opportunities, and Threats. Doing a rough SWOT analysis when noting down a startup idea makes it easier to see how solid the idea really is and to build on it over time.`,
+  },
+  "persona": {
+    tr: `Persona, ürününüzü kullanacak hedef kullanıcıyı temsil eden kurgusal bir profildir. Yaşı, işi, alışkanlıkları, bütçesi ve karşılaştığı problemler tanımlanır. Girişimcilikte personalar oluşturmak, "herkes için ürün yapma" tuzağına düşmeden belirli bir kişinin gerçek ihtiyacına odaklanmanızı sağlar.`,
+    en: `A persona is a fictional profile representing the target user of your product. It defines their age, job, habits, budget, and the problems they face. In entrepreneurship, creating personas helps you focus on a specific person's real need instead of falling into the trap of building a product "for everyone."`,
+  },
+  "domain-knowledge": {
+    tr: `Domain bilgisi, bir ürünün hitap ettiği sektörün veya alanın işleyişini bilmektir. Örneğin bir muhasebe uygulaması yazacaksanız, muhasebecilerin gününün nasıl geçtiğini, hangi adımlarda zorlandıklarını bilmeniz gerekir. Domain bilgisi olmadan yazılan uygulamalar teknik olarak doğru ama işe yaramaz olabilir.`,
+    en: `Domain knowledge means understanding how the industry or field your product serves actually works. For example, if you are building an accounting application, you need to know how accountants spend their day and where they struggle. Applications built without domain knowledge can be technically correct but useless in practice.`,
+  },
+  "git-worktree": {
+    tr: `Git worktree, aynı Git deposunun birden fazla branch'ini ayrı klasörlerde eşzamanlı olarak açmanızı sağlayan bir özelliktir. Böylece branch değiştirmeden farklı işler üzerinde paralel çalışabilirsiniz. Yapay zeka araçlarıyla çalışırken birden fazla görevi aynı anda yürütmek için sık kullanılan bir yaklaşımdır.`,
+    en: `Git worktree is a feature that lets you check out multiple branches of the same Git repository in separate folders at the same time. This way you can work on different tasks in parallel without switching branches. It is a commonly used approach for running multiple tasks simultaneously when working with AI tools.`,
+  },
 };
 
 export function getTooltipContent(key: string, lang: string = "tr"): string | undefined {
