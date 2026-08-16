@@ -26,7 +26,6 @@ export default function AdviceForEntrepreneurs() {
           <li>When you see someone in a video who is facing that exact problem, note it down along with the timestamp.</li>
           <li>Bookmark sites you think could be useful with tags, using apps like Raindrop.</li>
         </ul>
-        <p>In other words, entrepreneurship is being systematic.</p>
       </section>
 
       <section>
@@ -40,7 +39,6 @@ export default function AdviceForEntrepreneurs() {
           </li>
           <li>Don&apos;t adopt everything they do. Build a flow that suits you and prepare your own <ToolTip keyName="prompt">prompts</ToolTip> to get more done in less time.</li>
         </ul>
-        <p>Entrepreneurship is constantly improving yourself and questioning things.</p>
       </section>
 
       <section>
@@ -52,7 +50,6 @@ export default function AdviceForEntrepreneurs() {
           <li>Experiencing a problem first-hand, or seeing those who experience it, and also being the one who brings the idea to life is very valuable. That&apos;s when your venture&apos;s chance of success increases.</li>
           <li>Whenever you get the chance, talk to people from different fields about their work and try to understand what they go through.</li>
         </ul>
-        <p>Entrepreneurship is being a good observer.</p>
       </section>
 
       <section>

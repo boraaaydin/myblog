@@ -26,7 +26,6 @@ export default function AdviceForEntrepreneurs() {
           <li>İzlediğin bir videoda o sorunla karşılaşan birini gördüğünde dakikasıyla birlikte not et.</li>
           <li>Faydalı olabileceğini düşündüğün siteleri Raindrop gibi uygulamalarla etiketleyerek bookmark&apos;la.</li>
         </ul>
-        <p>Yani girişimcilik sistematik olmaktır.</p>
       </section>
 
       <section>
@@ -40,7 +39,6 @@ export default function AdviceForEntrepreneurs() {
           </li>
           <li>Onların her yaptığını alma. Kendine göre bir akış oluştur, daha kısa zamanda daha çok iş çıkarmak için kendi <ToolTip keyName="prompt">promptlarını</ToolTip> hazırla.</li>
         </ul>
-        <p>Girişimcilik devamlı kendini geliştirmektir, sorgulamaktır.</p>
       </section>
 
       <section>
@@ -52,7 +50,6 @@ export default function AdviceForEntrepreneurs() {
           <li>Her sorunu birinci elden yaşayıp ya da yaşayanları görüp, hem de fikri hayata geçiren olmak çok değerli. O zaman girişimin başarı şansı artar.</li>
           <li>Denk geldiğinde farklı alanlarla ilgili kişilerle onların işleri hakkında konuş, yaşadıklarını anlamaya çalış.</li>
         </ul>
-        <p>Girişimcilik iyi bir gözlemci olmaktır.</p>
       </section>
 
       <section>
